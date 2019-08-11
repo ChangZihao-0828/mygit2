@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{'/layui/css/layui.css'}" media="all">
+    <script th:src="@{'/layui/layui.js'}"></script>
+    <script th:src="@{'/inventoryjs/add_Material_check.js'}"></script>
+    <style type="text/css">
+        .layui-form-label{
+            width:130px;
+        }
+    </style>
+</head>
+<body>
+<br/>
+<h1>&nbsp;&nbsp;&nbsp;添加物料报废单</h1>
+<br/>
+<form class="layui-form" action="" method="post">
+    <table align="center" width="100%">
+        <tr>
+            <td colspan="4"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>基础信息</b></h4><hr/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">物料报废单编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" placeholder="请输入仓库检查单编号" class="layui-input">
+            </div><br/><br/></td>
+            <td align="center" width="15%">报废人:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" class="layui-input">
+            </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">报废物料:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" placeholder="请输入仓库检查单编号" class="layui-input">
+            </div><br/><br/></td>
+            <td align="center" width="15%">报废数量:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" class="layui-input">
+            </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">报废日期：&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input style="width: 470px" type="text" name="date" id="date" lay-verify="date" placeholder="年/月/日" autocomplete="off" class="layui-input">
+            </div><br/><br/></td>
+            <<td align="center" width="15%">报废原因:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" class="layui-input">
+            </div><br/><br/></td>
+        </tr>
+    </table>
+    <br/>
+    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>物料详情</b></h4><hr/>
+    <table class="layui-table" lay-size="lg" width="80%">
+        <colgroup>
+            <col width="200">
+            <col width="200">
+            <col width="200">
+            <col width="200">
+            <col width="200">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>物料编号</th>
+            <th>物料名称</th>
+            <th>物料规格</th>
+            <th>物料重量</th>
+            <th>物料数量</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>贤心</td>
+            <td>汉族</td>
+            <td>1989-10-14</td>
+            <td>人生似修行</td>
+            <td>人生似修行</td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+</html>

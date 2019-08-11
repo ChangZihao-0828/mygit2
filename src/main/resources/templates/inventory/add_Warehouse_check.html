@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{'/layui/css/layui.css'}" media="all">
+    <script th:src="@{'/layui/layui.js'}"></script>
+    <script th:src="@{'/inventoryjs/add_Warehouse_check.js'}"></script>
+    <style type="text/css">
+        .layui-form-label{
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+<br>
+<h1>&nbsp;&nbsp;&nbsp;添加仓库检查</h1>
+<br/>
+<form class="layui-form" action="" method="post">
+    <table align="center" width="100%">
+        <tr >
+            <td colspan="2" align="center"><h2>基础信息</h2><hr/></td><td colspan="2" align="center"><h2>检查内容</h2><hr/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">仓库检查单号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title"  style="width: 470px;" autocomplete="off" placeholder="请输入仓库检查单编号" class="layui-input">
+            </div><br/><br/></td>
+            <td align="center" width="15%">温度检查:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" class="layui-input">
+            </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">仓库编号：&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" placeholder="请输入检查的仓库编号" class="layui-input">
+            </div><br/><br/></td>
+            <td align="center" width="15%">湿度检查：&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" class="layui-input">
+            </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">检查人:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" placeholder="请输入检查人" class="layui-input">
+            </div><br/><br/></td>
+            <td align="center" width="15%">卫生检查：&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" class="layui-input">
+            </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">检查日期：&nbsp;&nbsp;</td>
+            <td width="35%" colspan="3"><div class="layui-input-inline">
+                <input  style="width: 470px;" type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            </div><br/><br/></td>
+
+        </tr>
+        <tr>
+            <td align="center" width="15%">检查时间:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td colspan="3"><div class="layui-input-inline">
+                <input type="text"  style="width: 230px;" class="layui-input" id="test5" placeholder="yyyy-MM-dd HH:mm:ss">
+            </div>
+                <div class="layui-input-inline">
+                    <input type="text"  style="width: 230px;" class="layui-input" id="test6" placeholder="yyyy-MM-dd HH:mm:ss">
+                </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center">
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

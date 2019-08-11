@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{'/layui/css/layui.css'}" media="all">
+    <script th:src="@{'/layui/layui.js'}"></script>
+    <script th:src="@{'/inventoryjs/Material_scrap.js'}"></script>
+</head>
+<body>
+<!--搜索界面 -->
+<Br>
+<div align="right">
+    <div class="layui-inline">
+        <input class="layui-input" name="id" id="id" placeholder="要搜索的编号"
+               autocomplete="off">
+    </div>
+    <button class="layui-btn" id="search">搜索</button>
+</div>
+<table id="demo" lay-filter="test"></table>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+<script type="text/html" id="addDemo">
+    <button class="layui-btn  layui-btn-primary" lay-event="add">
+        添加
+    </button>
+</script>
+</body>
+</html>
