@@ -5,12 +5,6 @@
     <title>Title</title>
     <link rel="stylesheet" th:href="@{'/layui/css/layui.css'}" media="all">
     <script th:src="@{'/layui/layui.js'}"></script>
-    <script th:src="@{'/inventoryjs/add_Material_check.js'}"></script>
-    <style type="text/css">
-        .layui-form-label{
-            width:130px;
-        }
-    </style>
 </head>
 <body>
 <br>
@@ -22,43 +16,34 @@
             <td colspan="4"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>基础信息</b></h4><hr/></td>
         </tr>
         <tr>
-            <td align="center" width="15%">盘点单单号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td align="center" width="15%">盘点单编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" placeholder="请输入仓库检查单编号" class="layui-input">
+                <input type="text" name="Stock_check_id" lay-verify="title" autocomplete="off" placeholder="请输入盘点单编号" class="layui-input">
             </div><br/><br/></td>
             <td align="center" width="15%">盘点人:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" class="layui-input">
+                <input type="text" name="user_id" lay-verify="title" placeholder="请输入盘点人编号" autocomplete="off" class="layui-input">
             </div><br/><br/></td>
         </tr>
 
         <tr>
             <td align="center" width="15%">盘点日期：&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input style="width: 470px" type="text" name="date" id="date" lay-verify="date" placeholder="年/月/日" autocomplete="off" class="layui-input">
+                <input type="text" name="check_date" id="date" lay-verify="date" placeholder="年/月/日" autocomplete="off" class="layui-input">
             </div><br/><br/></td>
-            <td align="center" width="15%">盘点时间:&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td width="35%"><div class="layui-input-inline">
-                <input style="width: 230px" type="text" class="layui-input" id="test5" placeholder="--:--">
-            </div>
-                <div class="layui-input-inline">
-                    <input style="width: 230px" type="text" class="layui-input" id="test6" placeholder="--:--">
-                </div><br/><br/></td>
+            <td align="center" width="15%">仓位编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%" colspan="3"><div class="layui-input-inline">
+                <input type="text" name="warehouse_position_id" lay-verify="title" autocomplete="off" placeholder="请输入仓位编号" class="layui-input">
+            </div><br/><br/></td>
         </tr>
         <tr>
             <td align="center" width="15%">仓库编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" placeholder="请输入仓库检查单编号" class="layui-input">
+                <input type="text" name="warehouse_id" lay-verify="title" autocomplete="off" placeholder="请输入仓库编号" class="layui-input">
             </div><br/><br/></td>
             <td align="center" width="15%">仓库区域编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" class="layui-input">
-            </div><br/><br/></td>
-        </tr>
-        <tr>
-            <td align="center" width="15%">仓位编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td width="35%" colspan="3"><div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" style="width: 470px;" autocomplete="off" placeholder="请输入仓库检查单编号" class="layui-input">
+                <input type="text" name="warehouse_region_id" lay-verify="title" placeholder="请输入仓库区域编号" autocomplete="off" class="layui-input">
             </div><br/><br/></td>
         </tr>
     </table>
@@ -66,11 +51,11 @@
     <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>物料详情</b></h4><hr/>
         <table class="layui-table" lay-size="lg" width="80%">
             <colgroup>
-                <col width="200">
-                <col width="200">
-                <col width="200">
-                <col width="200">
-                <col width="200">
+                <col width="150">
+                <col width="150">
+                <col width="150">
+                <col width="150">
+                <col width="150">
                 <col>
             </colgroup>
             <thead>
@@ -85,15 +70,64 @@
             </thead>
             <tbody>
             <tr>
-                <td>贤心</td>
-                <td>汉族</td>
-                <td>1989-10-14</td>
-                <td>人生似修行</td>
-                <td>人生似修行</td>
-                <td>人生似修行</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             </tbody>
         </table>
+    <table width="100%">
+        <tr>
+            <td align="center">
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
 </form>
+<script>
+    layui.use(['form', 'layedit', 'laydate'], function() {
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate;
+
+        //日期
+        laydate.render({
+            elem: '#date'
+            ,trigger: 'click'
+        });
+
+        //日期时间选择器
+        laydate.render({
+            elem: '#test5'
+            ,type: 'datetime'
+            ,trigger: 'click'
+        });
+
+        //日期时间选择器
+        laydate.render({
+            elem: '#test6'
+            ,type: 'datetime'
+            ,trigger: 'click'
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            })
+            return false;
+        });
+
+    });
+</script>
 </body>
 </html>

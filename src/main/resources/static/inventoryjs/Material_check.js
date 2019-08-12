@@ -12,14 +12,17 @@ layui.use('table', function(){
         ,title:"物料检查记录汇总" //设置导出文件时的标题
         ,loading:true
         ,cols: [[ //表头
-            {field: 'matter_check_id', title: '物料检查单编号', width:"20%", sort: true, fixed: 'left',align:"center"}
-            ,{field: 'matter _id', title: '检查的物料', width:"12.5%",align:"center"}
-            ,{field: 'warehouse_position_ _id', title: '检查的仓位', width:"12.5%",align:"center"}
-            ,{field: 'matter_check_user_id', title: '检查人', width:"5%",align:"center"}
-            ,{field: 'matter_check_date', title: '检查日期', width: "12.5%",align:"center", sort: true,templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
-            ,{field: 'matter_check_begin_time', title: '开始时间', width: "12.5%", sort: true,align:"center",templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
-            ,{field: 'matter_check_end_time', title: '结束时间', width: "12.5%", sort: true,align:"center",templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
-            ,{field: 'matter_check_result', title: '检查结果', width: "12.5%",align:"center"}
+            {field: 'matter_check_id', title: '物料检查单编号', width:"10%", sort: true, fixed: 'left',align:"center"}
+            ,{field: 'warehouse_position_id', title: '仓位编号', width:"10%", sort: true,align:"center"}
+            ,{field: 'matter_check_user_id', title: '检查人', width:"10%",align:"center"}
+            ,{field: 'matter_check_date', title: '检查日期', width: "10%",align:"center", sort: true,templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
+            ,{field: 'matter_check_result', title: '检查结果', width: "10%",align:"center"}
+            ,{field: 'temperature_check', title: '温度检查', width:"8%",align:"center"}
+            ,{field: 'humidity_check', title: '湿度检查', width:"8%",align:"center"}
+            ,{field: 'sanitation_check', title: '卫生检查', width:"8%",align:"center"}
+            ,{field: 'metamorphic_check', title: '变质检查', width:"8%",align:"center"}
+            ,{field: 'wearout_check', title: '破损检查', width:"8%",align:"center"}
+            , {field: 'op', title: '操作', width: "10%", align: "center", toolbar: "#barDemo"}
         ]]
     });
 
@@ -34,11 +37,11 @@ layui.use('table', function(){
                 layer.open({
                     type: 2,
                     shade: true,
-                    area: ['500px', '400px'],
+                    area: ['1000px', '440px'],
                     maxmin: false,
                     anim: 1,
                     title: "添加用户",
-                    content: '/forward/add',
+                    content: '/inventory/add_Material_check',
                     zIndex: layer.zIndex, //重点1
                     success: function (layero) {
                         layer.setTop(layero); //重点2
@@ -73,32 +76,7 @@ layui.use('table', function(){
         var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
         var tr = obj.tr; //获得当前行 tr 的DOM对象
 
-        if (layEvent === 'detail') { //查看
-            /******显示详情********/
-            layer.open({
-                type: 2,
-                shade: true,
-                area: ['500px', '400px'],
-                maxmin: false,
-                anim: 1,
-                title: "用户详情",
-                content: '/forward/detail',
-                zIndex: layer.zIndex, //重点1
-                success: function (layero) {
-                    layer.setTop(layero); //重点2
-                    /*********弹出新窗体以后，给新窗中的控件赋值**********************/
-                        //-------------获得弹出层页面的body部份
-                    var body = layui.layer.getChildFrame("body");
-
-                    //给弹出层body中的表单控件赋值
-                    body.find("[name='name']").val(data.name);
-                    body.find("[name='clazz']").val(data.clazz);
-                    body.find("[name='score']").val(data.score);
-                    body.find("[value='" + data.gender + "']").attr("checked", true);//选中指定性别的单选按钮
-                    body.find("[name='bir']").val(format(data.bir, 'yyyy-MM-dd'));
-                }
-            });
-        } else if (layEvent === 'del') { //删除
+        if (layEvent === 'del') { //删除
 
             layer.confirm('真的删除行么', function (index) {
 
