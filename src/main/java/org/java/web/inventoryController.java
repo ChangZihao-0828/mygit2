@@ -20,7 +20,7 @@ public class inventoryController {
     @GetMapping("/inventory/{page}")
     public String inventory(@PathVariable("page") String page){
 
-        System.out.println("--------");
+        System.out.println("---------");
         return "inventory/"+page;
     }
     @GetMapping("/forword/{page}")
