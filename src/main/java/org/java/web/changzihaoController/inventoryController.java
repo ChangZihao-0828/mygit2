@@ -1,4 +1,4 @@
-package org.java.web;
+package org.java.web.changzihaoController;
 
 import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import org.springframework.stereotype.Controller;
@@ -23,12 +23,7 @@ public class inventoryController {
         System.out.println("---------");
         return "inventory/"+page;
     }
-    @GetMapping("/forword/{page}")
-    public String forword(@PathVariable("page") String page){
 
-        System.out.println("--------");
-        return "/"+page;
-    }
 
     @GetMapping("init")
     public Map<String,Object> init(){

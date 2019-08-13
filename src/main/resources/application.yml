@@ -11,3 +11,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
+
+mybatis:
+  mapper-locations: mapper/*Mapper.xml
+  type-aliases-package: org.java.entity
