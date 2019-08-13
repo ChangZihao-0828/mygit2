@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.WarehouserTypeMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.WarehouserType">
+    <id column="warehouser_Type_id" jdbcType="INTEGER" property="warehouserTypeId" />
+    <result column="warehouserType_state" jdbcType="VARCHAR" property="warehousertypeState" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    warehouser_Type_id, warehouserType_state
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from warehouser_type
+    where warehouser_Type_id = #{warehouserTypeId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from warehouser_type
+    where warehouser_Type_id = #{warehouserTypeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.WarehouserType">
+    insert into warehouser_type (warehouser_Type_id, warehouserType_state
+      )
+    values (#{warehouserTypeId,jdbcType=INTEGER}, #{warehousertypeState,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.WarehouserType">
+    insert into warehouser_type
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="warehouserTypeId != null">
+        warehouser_Type_id,
+      </if>
+      <if test="warehousertypeState != null">
+        warehouserType_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="warehouserTypeId != null">
+        #{warehouserTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="warehousertypeState != null">
+        #{warehousertypeState,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.WarehouserType">
+    update warehouser_type
+    <set>
+      <if test="warehousertypeState != null">
+        warehouserType_state = #{warehousertypeState,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where warehouser_Type_id = #{warehouserTypeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.WarehouserType">
+    update warehouser_type
+    set warehouserType_state = #{warehousertypeState,jdbcType=VARCHAR}
+    where warehouser_Type_id = #{warehouserTypeId,jdbcType=INTEGER}
+  </update>
+</mapper>

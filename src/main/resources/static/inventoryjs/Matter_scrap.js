@@ -1,25 +1,24 @@
-layui.use('table', function(){
+layui.use(['table','layer','jquery'], function(){
     var table = layui.table;
-
+    var layer = layui.layer;
+    var $ = layui.$;
     //第一个实例
     table.render({
         elem: '#demo'
-        ,url: '/init' //数据接口
+        ,url: '/matterScrap' //数据接口
         ,page: true //开启分页
         ,limit:5 //默认每一页显示的条数
         ,limits:[1,2,3,5,10,20,30,50]//提示的每页条数的列表
         ,toolbar:"#addDemo" //显示工具栏
-        ,title:"库存盘点记录汇总" //设置导出文件时的标题
+        ,title:"物料报废记录汇总" //设置导出文件时的标题
         ,loading:true
         ,cols: [[ //表头
-            {field: 'stock_check_id', title: '库存盘点记录编号', width:"10%", sort: true, fixed: 'left',align:"center"}
-            ,{field: 'user_id', title: '盘点人', width:"15%",align:"center"}
-            ,{field: 'check_date', title: '盘点日期', width:"12.5%", sort: true,align:"center",templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
-            ,{field: 'matter _id', title: '物料编号', width:"12.5%",align:"center", sort: true}
-            ,{field: 'matter _id', title: '数量', width:"10%",align:"center", sort: true}
-            ,{field: 'warehouse _id', title: '仓库编号', width:"10%",align:"center", sort: true}
-            ,{field: 'warehouse_position _id', title: '仓库区域编号', width: "10%",align:"center", sort: true}
-            ,{field: 'warehouse_ region _id', title: '仓位编号', width: "10%",align:"center", sort: true}
+            {field: 'matter_reject_id', title: '物料报废记录编号', width:"20%", sort: true, fixed: 'left',align:"center"}
+            ,{field: 'matter _id', title: '报废的物料', width:"16%",align:"center"}
+            ,{field: 'matter_user_count', title: '报废的数量', width:"16%", sort: true,align:"center"}
+            ,{field: 'matter_user_id', title: '报废人', width:"12%",align:"center"}
+            ,{field: 'matter_reject_date', title: '报废日期', width: "13%",align:"center", sort: true,templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
+            ,{field: 'matter_reject_reason', title: '报废原因', width: "13%",align:"center"}
             , {field: 'op', title: '操作', width: "10%", align: "center", toolbar: "#barDemo"}
         ]]
     });
@@ -38,8 +37,8 @@ layui.use('table', function(){
                     area: ['1000px', '440px'],
                     maxmin: false,
                     anim: 1,
-                    title: "添加用户",
-                    content: '/inventory/add_Inventory_verification',
+                    title: "添加物料报废单",
+                    content: '/inventory/add_Matter_scrap',
                     zIndex: layer.zIndex, //重点1
                     success: function (layero) {
                         layer.setTop(layero); //重点2
@@ -74,7 +73,7 @@ layui.use('table', function(){
         var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
         var tr = obj.tr; //获得当前行 tr 的DOM对象
 
-        if (layEvent === 'del') { //删除
+       if (layEvent === 'del') { //删除
 
             layer.confirm('真的删除行么', function (index) {
 
@@ -94,11 +93,11 @@ layui.use('table', function(){
             layer.open({
                 type: 2,
                 shade: true,
-                area: ['500px', '400px'],
+                area: ['1000px', '440px'],
                 maxmin: false,
                 anim: 1,
-                title: "修改用户",
-                content: '/forward/update',
+                title: "物料报废单详情",
+                content: '/inventory/detail_Matter_scrap',
                 zIndex: layer.zIndex, //重点1
                 success: function (layero) {
                     layer.setTop(layero); //重点2

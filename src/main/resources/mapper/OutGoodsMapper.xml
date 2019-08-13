@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.OutGoodsMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.OutGoods">
+    <id column="out_goods_id" jdbcType="VARCHAR" property="outGoodsId" />
+    <result column="warehouse_id" jdbcType="VARCHAR" property="warehouseId" />
+    <result column="customer_order_id" jdbcType="VARCHAR" property="customerOrderId" />
+    <result column="out_goods_time" jdbcType="DATE" property="outGoodsTime" />
+    <result column="out_goods_status" jdbcType="VARCHAR" property="outGoodsStatus" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    out_goods_id, warehouse_id, customer_order_id, out_goods_time, out_goods_status, 
+    processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from out_goods
+    where out_goods_id = #{outGoodsId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from out_goods
+    where out_goods_id = #{outGoodsId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.OutGoods">
+    insert into out_goods (out_goods_id, warehouse_id, customer_order_id, 
+      out_goods_time, out_goods_status, processinstance_id
+      )
+    values (#{outGoodsId,jdbcType=VARCHAR}, #{warehouseId,jdbcType=VARCHAR}, #{customerOrderId,jdbcType=VARCHAR}, 
+      #{outGoodsTime,jdbcType=DATE}, #{outGoodsStatus,jdbcType=VARCHAR}, #{processinstanceId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.OutGoods">
+    insert into out_goods
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="outGoodsId != null">
+        out_goods_id,
+      </if>
+      <if test="warehouseId != null">
+        warehouse_id,
+      </if>
+      <if test="customerOrderId != null">
+        customer_order_id,
+      </if>
+      <if test="outGoodsTime != null">
+        out_goods_time,
+      </if>
+      <if test="outGoodsStatus != null">
+        out_goods_status,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="outGoodsId != null">
+        #{outGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseId != null">
+        #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderId != null">
+        #{customerOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="outGoodsTime != null">
+        #{outGoodsTime,jdbcType=DATE},
+      </if>
+      <if test="outGoodsStatus != null">
+        #{outGoodsStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.OutGoods">
+    update out_goods
+    <set>
+      <if test="warehouseId != null">
+        warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderId != null">
+        customer_order_id = #{customerOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="outGoodsTime != null">
+        out_goods_time = #{outGoodsTime,jdbcType=DATE},
+      </if>
+      <if test="outGoodsStatus != null">
+        out_goods_status = #{outGoodsStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where out_goods_id = #{outGoodsId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.OutGoods">
+    update out_goods
+    set warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      customer_order_id = #{customerOrderId,jdbcType=VARCHAR},
+      out_goods_time = #{outGoodsTime,jdbcType=DATE},
+      out_goods_status = #{outGoodsStatus,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where out_goods_id = #{outGoodsId,jdbcType=VARCHAR}
+  </update>
+</mapper>

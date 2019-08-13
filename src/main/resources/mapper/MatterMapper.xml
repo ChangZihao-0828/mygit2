@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.MatterMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.Matter">
+    <id column="matter_id" jdbcType="VARCHAR" property="matterId" />
+    <result column="matter_name" jdbcType="VARCHAR" property="matterName" />
+    <result column="matter_weight" jdbcType="INTEGER" property="matterWeight" />
+    <result column="matter_unit" jdbcType="VARCHAR" property="matterUnit" />
+    <result column="matter_spec" jdbcType="VARCHAR" property="matterSpec" />
+    <result column="matter_bulk" jdbcType="VARCHAR" property="matterBulk" />
+    <result column="matter_stock" jdbcType="INTEGER" property="matterStock" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    matter_id, matter_name, matter_weight, matter_unit, matter_spec, matter_bulk, matter_stock
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from matter
+    where matter_id = #{matterId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from matter
+    where matter_id = #{matterId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.Matter">
+    insert into matter (matter_id, matter_name, matter_weight, 
+      matter_unit, matter_spec, matter_bulk, 
+      matter_stock)
+    values (#{matterId,jdbcType=VARCHAR}, #{matterName,jdbcType=VARCHAR}, #{matterWeight,jdbcType=INTEGER}, 
+      #{matterUnit,jdbcType=VARCHAR}, #{matterSpec,jdbcType=VARCHAR}, #{matterBulk,jdbcType=VARCHAR}, 
+      #{matterStock,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.Matter">
+    insert into matter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="matterId != null">
+        matter_id,
+      </if>
+      <if test="matterName != null">
+        matter_name,
+      </if>
+      <if test="matterWeight != null">
+        matter_weight,
+      </if>
+      <if test="matterUnit != null">
+        matter_unit,
+      </if>
+      <if test="matterSpec != null">
+        matter_spec,
+      </if>
+      <if test="matterBulk != null">
+        matter_bulk,
+      </if>
+      <if test="matterStock != null">
+        matter_stock,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="matterId != null">
+        #{matterId,jdbcType=VARCHAR},
+      </if>
+      <if test="matterName != null">
+        #{matterName,jdbcType=VARCHAR},
+      </if>
+      <if test="matterWeight != null">
+        #{matterWeight,jdbcType=INTEGER},
+      </if>
+      <if test="matterUnit != null">
+        #{matterUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="matterSpec != null">
+        #{matterSpec,jdbcType=VARCHAR},
+      </if>
+      <if test="matterBulk != null">
+        #{matterBulk,jdbcType=VARCHAR},
+      </if>
+      <if test="matterStock != null">
+        #{matterStock,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.Matter">
+    update matter
+    <set>
+      <if test="matterName != null">
+        matter_name = #{matterName,jdbcType=VARCHAR},
+      </if>
+      <if test="matterWeight != null">
+        matter_weight = #{matterWeight,jdbcType=INTEGER},
+      </if>
+      <if test="matterUnit != null">
+        matter_unit = #{matterUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="matterSpec != null">
+        matter_spec = #{matterSpec,jdbcType=VARCHAR},
+      </if>
+      <if test="matterBulk != null">
+        matter_bulk = #{matterBulk,jdbcType=VARCHAR},
+      </if>
+      <if test="matterStock != null">
+        matter_stock = #{matterStock,jdbcType=INTEGER},
+      </if>
+    </set>
+    where matter_id = #{matterId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.Matter">
+    update matter
+    set matter_name = #{matterName,jdbcType=VARCHAR},
+      matter_weight = #{matterWeight,jdbcType=INTEGER},
+      matter_unit = #{matterUnit,jdbcType=VARCHAR},
+      matter_spec = #{matterSpec,jdbcType=VARCHAR},
+      matter_bulk = #{matterBulk,jdbcType=VARCHAR},
+      matter_stock = #{matterStock,jdbcType=INTEGER}
+    where matter_id = #{matterId,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.StockCheckMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.StockCheck">
+    <id column="Stock_check_id" jdbcType="VARCHAR" property="stockCheckId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="check_date" jdbcType="DATE" property="checkDate" />
+    <result column="matter_id" jdbcType="VARCHAR" property="matterId" />
+    <result column="stock_count" jdbcType="INTEGER" property="stockCount" />
+    <result column="warehouse_id" jdbcType="VARCHAR" property="warehouseId" />
+    <result column="warehouse_region_id" jdbcType="VARCHAR" property="warehouseRegionId" />
+    <result column="warehouse_position_id" jdbcType="VARCHAR" property="warehousePositionId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    Stock_check_id, user_id, check_date, matter_id, stock_count, warehouse_id, warehouse_region_id, 
+    warehouse_position_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from stock_check
+    where Stock_check_id = #{stockCheckId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from stock_check
+    where Stock_check_id = #{stockCheckId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.StockCheck">
+    insert into stock_check (Stock_check_id, user_id, check_date, 
+      matter_id, stock_count, warehouse_id, 
+      warehouse_region_id, warehouse_position_id)
+    values (#{stockCheckId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{checkDate,jdbcType=DATE}, 
+      #{matterId,jdbcType=VARCHAR}, #{stockCount,jdbcType=INTEGER}, #{warehouseId,jdbcType=VARCHAR}, 
+      #{warehouseRegionId,jdbcType=VARCHAR}, #{warehousePositionId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.StockCheck">
+    insert into stock_check
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="stockCheckId != null">
+        Stock_check_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="checkDate != null">
+        check_date,
+      </if>
+      <if test="matterId != null">
+        matter_id,
+      </if>
+      <if test="stockCount != null">
+        stock_count,
+      </if>
+      <if test="warehouseId != null">
+        warehouse_id,
+      </if>
+      <if test="warehouseRegionId != null">
+        warehouse_region_id,
+      </if>
+      <if test="warehousePositionId != null">
+        warehouse_position_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="stockCheckId != null">
+        #{stockCheckId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="checkDate != null">
+        #{checkDate,jdbcType=DATE},
+      </if>
+      <if test="matterId != null">
+        #{matterId,jdbcType=VARCHAR},
+      </if>
+      <if test="stockCount != null">
+        #{stockCount,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseId != null">
+        #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseRegionId != null">
+        #{warehouseRegionId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehousePositionId != null">
+        #{warehousePositionId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.StockCheck">
+    update stock_check
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="checkDate != null">
+        check_date = #{checkDate,jdbcType=DATE},
+      </if>
+      <if test="matterId != null">
+        matter_id = #{matterId,jdbcType=VARCHAR},
+      </if>
+      <if test="stockCount != null">
+        stock_count = #{stockCount,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseId != null">
+        warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseRegionId != null">
+        warehouse_region_id = #{warehouseRegionId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehousePositionId != null">
+        warehouse_position_id = #{warehousePositionId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Stock_check_id = #{stockCheckId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.StockCheck">
+    update stock_check
+    set user_id = #{userId,jdbcType=VARCHAR},
+      check_date = #{checkDate,jdbcType=DATE},
+      matter_id = #{matterId,jdbcType=VARCHAR},
+      stock_count = #{stockCount,jdbcType=INTEGER},
+      warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      warehouse_region_id = #{warehouseRegionId,jdbcType=VARCHAR},
+      warehouse_position_id = #{warehousePositionId,jdbcType=VARCHAR}
+    where Stock_check_id = #{stockCheckId,jdbcType=VARCHAR}
+  </update>
+  <select id="findStockCheck" resultMap="BaseResultMap">
+    select * from stock_check
+  </select>
+  <select id="findStockCheckCount" resultType="java.lang.Integer">
+    select count(*) from stock_check
+  </select>
+</mapper>

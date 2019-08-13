@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.PurchaseOrderMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.PurchaseOrder">
+    <id column="purchase_order_id" jdbcType="VARCHAR" property="purchaseOrderId" />
+    <result column="purchase_supplier_id" jdbcType="INTEGER" property="purchaseSupplierId" />
+    <result column="purchase_order_beginTime" jdbcType="DATE" property="purchaseOrderBegintime" />
+    <result column="purchase_order_endTime" jdbcType="DATE" property="purchaseOrderEndtime" />
+    <result column="purchase_applly_order_id" jdbcType="VARCHAR" property="purchaseAppllyOrderId" />
+    <result column="customer_id" jdbcType="VARCHAR" property="customerId" />
+    <result column="purchase_type" jdbcType="VARCHAR" property="purchaseType" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    purchase_order_id, purchase_supplier_id, purchase_order_beginTime, purchase_order_endTime, 
+    purchase_applly_order_id, customer_id, purchase_type, processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from purchase_order
+    where purchase_order_id = #{purchaseOrderId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from purchase_order
+    where purchase_order_id = #{purchaseOrderId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.PurchaseOrder">
+    insert into purchase_order (purchase_order_id, purchase_supplier_id, 
+      purchase_order_beginTime, purchase_order_endTime, 
+      purchase_applly_order_id, customer_id, purchase_type, 
+      processinstance_id)
+    values (#{purchaseOrderId,jdbcType=VARCHAR}, #{purchaseSupplierId,jdbcType=INTEGER}, 
+      #{purchaseOrderBegintime,jdbcType=DATE}, #{purchaseOrderEndtime,jdbcType=DATE}, 
+      #{purchaseAppllyOrderId,jdbcType=VARCHAR}, #{customerId,jdbcType=VARCHAR}, #{purchaseType,jdbcType=VARCHAR}, 
+      #{processinstanceId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.PurchaseOrder">
+    insert into purchase_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="purchaseOrderId != null">
+        purchase_order_id,
+      </if>
+      <if test="purchaseSupplierId != null">
+        purchase_supplier_id,
+      </if>
+      <if test="purchaseOrderBegintime != null">
+        purchase_order_beginTime,
+      </if>
+      <if test="purchaseOrderEndtime != null">
+        purchase_order_endTime,
+      </if>
+      <if test="purchaseAppllyOrderId != null">
+        purchase_applly_order_id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="purchaseType != null">
+        purchase_type,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="purchaseOrderId != null">
+        #{purchaseOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="purchaseSupplierId != null">
+        #{purchaseSupplierId,jdbcType=INTEGER},
+      </if>
+      <if test="purchaseOrderBegintime != null">
+        #{purchaseOrderBegintime,jdbcType=DATE},
+      </if>
+      <if test="purchaseOrderEndtime != null">
+        #{purchaseOrderEndtime,jdbcType=DATE},
+      </if>
+      <if test="purchaseAppllyOrderId != null">
+        #{purchaseAppllyOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="purchaseType != null">
+        #{purchaseType,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.PurchaseOrder">
+    update purchase_order
+    <set>
+      <if test="purchaseSupplierId != null">
+        purchase_supplier_id = #{purchaseSupplierId,jdbcType=INTEGER},
+      </if>
+      <if test="purchaseOrderBegintime != null">
+        purchase_order_beginTime = #{purchaseOrderBegintime,jdbcType=DATE},
+      </if>
+      <if test="purchaseOrderEndtime != null">
+        purchase_order_endTime = #{purchaseOrderEndtime,jdbcType=DATE},
+      </if>
+      <if test="purchaseAppllyOrderId != null">
+        purchase_applly_order_id = #{purchaseAppllyOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="purchaseType != null">
+        purchase_type = #{purchaseType,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where purchase_order_id = #{purchaseOrderId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.PurchaseOrder">
+    update purchase_order
+    set purchase_supplier_id = #{purchaseSupplierId,jdbcType=INTEGER},
+      purchase_order_beginTime = #{purchaseOrderBegintime,jdbcType=DATE},
+      purchase_order_endTime = #{purchaseOrderEndtime,jdbcType=DATE},
+      purchase_applly_order_id = #{purchaseAppllyOrderId,jdbcType=VARCHAR},
+      customer_id = #{customerId,jdbcType=VARCHAR},
+      purchase_type = #{purchaseType,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where purchase_order_id = #{purchaseOrderId,jdbcType=VARCHAR}
+  </update>
+</mapper>

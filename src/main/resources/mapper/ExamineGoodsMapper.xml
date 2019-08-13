@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.ExamineGoodsMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.ExamineGoods">
+    <id column="examine_goods_id" jdbcType="VARCHAR" property="examineGoodsId" />
+    <result column="in_goods_id" jdbcType="VARCHAR" property="inGoodsId" />
+    <result column="in_equip_goods_id" jdbcType="VARCHAR" property="inEquipGoodsId" />
+    <result column="examine_goods_people" jdbcType="VARCHAR" property="examineGoodsPeople" />
+    <result column="examine_goods_time" jdbcType="DATE" property="examineGoodsTime" />
+    <result column="examine_goods_remark" jdbcType="VARCHAR" property="examineGoodsRemark" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    examine_goods_id, in_goods_id, in_equip_goods_id, examine_goods_people, examine_goods_time, 
+    examine_goods_remark, processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from examine_goods
+    where examine_goods_id = #{examineGoodsId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from examine_goods
+    where examine_goods_id = #{examineGoodsId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.ExamineGoods">
+    insert into examine_goods (examine_goods_id, in_goods_id, in_equip_goods_id, 
+      examine_goods_people, examine_goods_time, examine_goods_remark, 
+      processinstance_id)
+    values (#{examineGoodsId,jdbcType=VARCHAR}, #{inGoodsId,jdbcType=VARCHAR}, #{inEquipGoodsId,jdbcType=VARCHAR}, 
+      #{examineGoodsPeople,jdbcType=VARCHAR}, #{examineGoodsTime,jdbcType=DATE}, #{examineGoodsRemark,jdbcType=VARCHAR}, 
+      #{processinstanceId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.ExamineGoods">
+    insert into examine_goods
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="examineGoodsId != null">
+        examine_goods_id,
+      </if>
+      <if test="inGoodsId != null">
+        in_goods_id,
+      </if>
+      <if test="inEquipGoodsId != null">
+        in_equip_goods_id,
+      </if>
+      <if test="examineGoodsPeople != null">
+        examine_goods_people,
+      </if>
+      <if test="examineGoodsTime != null">
+        examine_goods_time,
+      </if>
+      <if test="examineGoodsRemark != null">
+        examine_goods_remark,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="examineGoodsId != null">
+        #{examineGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="inGoodsId != null">
+        #{inGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="inEquipGoodsId != null">
+        #{inEquipGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="examineGoodsPeople != null">
+        #{examineGoodsPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="examineGoodsTime != null">
+        #{examineGoodsTime,jdbcType=DATE},
+      </if>
+      <if test="examineGoodsRemark != null">
+        #{examineGoodsRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.ExamineGoods">
+    update examine_goods
+    <set>
+      <if test="inGoodsId != null">
+        in_goods_id = #{inGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="inEquipGoodsId != null">
+        in_equip_goods_id = #{inEquipGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="examineGoodsPeople != null">
+        examine_goods_people = #{examineGoodsPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="examineGoodsTime != null">
+        examine_goods_time = #{examineGoodsTime,jdbcType=DATE},
+      </if>
+      <if test="examineGoodsRemark != null">
+        examine_goods_remark = #{examineGoodsRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where examine_goods_id = #{examineGoodsId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.ExamineGoods">
+    update examine_goods
+    set in_goods_id = #{inGoodsId,jdbcType=VARCHAR},
+      in_equip_goods_id = #{inEquipGoodsId,jdbcType=VARCHAR},
+      examine_goods_people = #{examineGoodsPeople,jdbcType=VARCHAR},
+      examine_goods_time = #{examineGoodsTime,jdbcType=DATE},
+      examine_goods_remark = #{examineGoodsRemark,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where examine_goods_id = #{examineGoodsId,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.WarehousePositionMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.WarehousePosition">
+    <id column="warehouse_position_id" jdbcType="VARCHAR" property="warehousePositionId" />
+    <result column="Warehouse_position_region_id" jdbcType="VARCHAR" property="warehousePositionRegionId" />
+    <result column="warehouse_id" jdbcType="VARCHAR" property="warehouseId" />
+    <result column="warehouse_position_area" jdbcType="INTEGER" property="warehousePositionArea" />
+    <result column="warehouse_position_build_date" jdbcType="DATE" property="warehousePositionBuildDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    warehouse_position_id, Warehouse_position_region_id, warehouse_id, warehouse_position_area, 
+    warehouse_position_build_date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from warehouse_position
+    where warehouse_position_id = #{warehousePositionId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from warehouse_position
+    where warehouse_position_id = #{warehousePositionId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.WarehousePosition">
+    insert into warehouse_position (warehouse_position_id, Warehouse_position_region_id, 
+      warehouse_id, warehouse_position_area, warehouse_position_build_date
+      )
+    values (#{warehousePositionId,jdbcType=VARCHAR}, #{warehousePositionRegionId,jdbcType=VARCHAR}, 
+      #{warehouseId,jdbcType=VARCHAR}, #{warehousePositionArea,jdbcType=INTEGER}, #{warehousePositionBuildDate,jdbcType=DATE}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.WarehousePosition">
+    insert into warehouse_position
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="warehousePositionId != null">
+        warehouse_position_id,
+      </if>
+      <if test="warehousePositionRegionId != null">
+        Warehouse_position_region_id,
+      </if>
+      <if test="warehouseId != null">
+        warehouse_id,
+      </if>
+      <if test="warehousePositionArea != null">
+        warehouse_position_area,
+      </if>
+      <if test="warehousePositionBuildDate != null">
+        warehouse_position_build_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="warehousePositionId != null">
+        #{warehousePositionId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehousePositionRegionId != null">
+        #{warehousePositionRegionId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseId != null">
+        #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehousePositionArea != null">
+        #{warehousePositionArea,jdbcType=INTEGER},
+      </if>
+      <if test="warehousePositionBuildDate != null">
+        #{warehousePositionBuildDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.WarehousePosition">
+    update warehouse_position
+    <set>
+      <if test="warehousePositionRegionId != null">
+        Warehouse_position_region_id = #{warehousePositionRegionId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseId != null">
+        warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehousePositionArea != null">
+        warehouse_position_area = #{warehousePositionArea,jdbcType=INTEGER},
+      </if>
+      <if test="warehousePositionBuildDate != null">
+        warehouse_position_build_date = #{warehousePositionBuildDate,jdbcType=DATE},
+      </if>
+    </set>
+    where warehouse_position_id = #{warehousePositionId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.WarehousePosition">
+    update warehouse_position
+    set Warehouse_position_region_id = #{warehousePositionRegionId,jdbcType=VARCHAR},
+      warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      warehouse_position_area = #{warehousePositionArea,jdbcType=INTEGER},
+      warehouse_position_build_date = #{warehousePositionBuildDate,jdbcType=DATE}
+    where warehouse_position_id = #{warehousePositionId,jdbcType=VARCHAR}
+  </update>
+</mapper>

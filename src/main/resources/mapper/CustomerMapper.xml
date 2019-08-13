@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.CustomerMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.Customer">
+    <id column="customer_id" jdbcType="VARCHAR" property="customerId" />
+    <result column="customer_name" jdbcType="VARCHAR" property="customerName" />
+    <result column="customer_pwd" jdbcType="VARCHAR" property="customerPwd" />
+    <result column="customer_shortName" jdbcType="VARCHAR" property="customerShortname" />
+    <result column="customer_vocation_id" jdbcType="INTEGER" property="customerVocationId" />
+    <result column="customer_telephone" jdbcType="INTEGER" property="customerTelephone" />
+    <result column="customer_contacts" jdbcType="VARCHAR" property="customerContacts" />
+    <result column="customer_creditIimit" jdbcType="INTEGER" property="customerCreditiimit" />
+    <result column="customer_email" jdbcType="VARCHAR" property="customerEmail" />
+    <result column="customer_address" jdbcType="VARCHAR" property="customerAddress" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    customer_id, customer_name, customer_pwd, customer_shortName, customer_vocation_id, 
+    customer_telephone, customer_contacts, customer_creditIimit, customer_email, customer_address
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from customer
+    where customer_id = #{customerId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from customer
+    where customer_id = #{customerId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.Customer">
+    insert into customer (customer_id, customer_name, customer_pwd, 
+      customer_shortName, customer_vocation_id, 
+      customer_telephone, customer_contacts, customer_creditIimit, 
+      customer_email, customer_address)
+    values (#{customerId,jdbcType=VARCHAR}, #{customerName,jdbcType=VARCHAR}, #{customerPwd,jdbcType=VARCHAR}, 
+      #{customerShortname,jdbcType=VARCHAR}, #{customerVocationId,jdbcType=INTEGER}, 
+      #{customerTelephone,jdbcType=INTEGER}, #{customerContacts,jdbcType=VARCHAR}, #{customerCreditiimit,jdbcType=INTEGER}, 
+      #{customerEmail,jdbcType=VARCHAR}, #{customerAddress,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.Customer">
+    insert into customer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="customerName != null">
+        customer_name,
+      </if>
+      <if test="customerPwd != null">
+        customer_pwd,
+      </if>
+      <if test="customerShortname != null">
+        customer_shortName,
+      </if>
+      <if test="customerVocationId != null">
+        customer_vocation_id,
+      </if>
+      <if test="customerTelephone != null">
+        customer_telephone,
+      </if>
+      <if test="customerContacts != null">
+        customer_contacts,
+      </if>
+      <if test="customerCreditiimit != null">
+        customer_creditIimit,
+      </if>
+      <if test="customerEmail != null">
+        customer_email,
+      </if>
+      <if test="customerAddress != null">
+        customer_address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="customerId != null">
+        #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerName != null">
+        #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="customerPwd != null">
+        #{customerPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="customerShortname != null">
+        #{customerShortname,jdbcType=VARCHAR},
+      </if>
+      <if test="customerVocationId != null">
+        #{customerVocationId,jdbcType=INTEGER},
+      </if>
+      <if test="customerTelephone != null">
+        #{customerTelephone,jdbcType=INTEGER},
+      </if>
+      <if test="customerContacts != null">
+        #{customerContacts,jdbcType=VARCHAR},
+      </if>
+      <if test="customerCreditiimit != null">
+        #{customerCreditiimit,jdbcType=INTEGER},
+      </if>
+      <if test="customerEmail != null">
+        #{customerEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="customerAddress != null">
+        #{customerAddress,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.Customer">
+    update customer
+    <set>
+      <if test="customerName != null">
+        customer_name = #{customerName,jdbcType=VARCHAR},
+      </if>
+      <if test="customerPwd != null">
+        customer_pwd = #{customerPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="customerShortname != null">
+        customer_shortName = #{customerShortname,jdbcType=VARCHAR},
+      </if>
+      <if test="customerVocationId != null">
+        customer_vocation_id = #{customerVocationId,jdbcType=INTEGER},
+      </if>
+      <if test="customerTelephone != null">
+        customer_telephone = #{customerTelephone,jdbcType=INTEGER},
+      </if>
+      <if test="customerContacts != null">
+        customer_contacts = #{customerContacts,jdbcType=VARCHAR},
+      </if>
+      <if test="customerCreditiimit != null">
+        customer_creditIimit = #{customerCreditiimit,jdbcType=INTEGER},
+      </if>
+      <if test="customerEmail != null">
+        customer_email = #{customerEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="customerAddress != null">
+        customer_address = #{customerAddress,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where customer_id = #{customerId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.Customer">
+    update customer
+    set customer_name = #{customerName,jdbcType=VARCHAR},
+      customer_pwd = #{customerPwd,jdbcType=VARCHAR},
+      customer_shortName = #{customerShortname,jdbcType=VARCHAR},
+      customer_vocation_id = #{customerVocationId,jdbcType=INTEGER},
+      customer_telephone = #{customerTelephone,jdbcType=INTEGER},
+      customer_contacts = #{customerContacts,jdbcType=VARCHAR},
+      customer_creditIimit = #{customerCreditiimit,jdbcType=INTEGER},
+      customer_email = #{customerEmail,jdbcType=VARCHAR},
+      customer_address = #{customerAddress,jdbcType=VARCHAR}
+    where customer_id = #{customerId,jdbcType=VARCHAR}
+  </update>
+</mapper>

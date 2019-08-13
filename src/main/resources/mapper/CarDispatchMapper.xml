@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.CarDispatchMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.CarDispatch">
+    <id column="car_dispatch_id" jdbcType="VARCHAR" property="carDispatchId" />
+    <result column="car_id" jdbcType="INTEGER" property="carId" />
+    <result column="deliver_goods_id" jdbcType="VARCHAR" property="deliverGoodsId" />
+    <result column="car_go_date" jdbcType="DATE" property="carGoDate" />
+    <result column="car_back_date" jdbcType="DATE" property="carBackDate" />
+    <result column="car_dispatch_status" jdbcType="VARCHAR" property="carDispatchStatus" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    car_dispatch_id, car_id, deliver_goods_id, car_go_date, car_back_date, car_dispatch_status, 
+    processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from car_dispatch
+    where car_dispatch_id = #{carDispatchId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from car_dispatch
+    where car_dispatch_id = #{carDispatchId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.CarDispatch">
+    insert into car_dispatch (car_dispatch_id, car_id, deliver_goods_id, 
+      car_go_date, car_back_date, car_dispatch_status, 
+      processinstance_id)
+    values (#{carDispatchId,jdbcType=VARCHAR}, #{carId,jdbcType=INTEGER}, #{deliverGoodsId,jdbcType=VARCHAR}, 
+      #{carGoDate,jdbcType=DATE}, #{carBackDate,jdbcType=DATE}, #{carDispatchStatus,jdbcType=VARCHAR}, 
+      #{processinstanceId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.CarDispatch">
+    insert into car_dispatch
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="carDispatchId != null">
+        car_dispatch_id,
+      </if>
+      <if test="carId != null">
+        car_id,
+      </if>
+      <if test="deliverGoodsId != null">
+        deliver_goods_id,
+      </if>
+      <if test="carGoDate != null">
+        car_go_date,
+      </if>
+      <if test="carBackDate != null">
+        car_back_date,
+      </if>
+      <if test="carDispatchStatus != null">
+        car_dispatch_status,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="carDispatchId != null">
+        #{carDispatchId,jdbcType=VARCHAR},
+      </if>
+      <if test="carId != null">
+        #{carId,jdbcType=INTEGER},
+      </if>
+      <if test="deliverGoodsId != null">
+        #{deliverGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="carGoDate != null">
+        #{carGoDate,jdbcType=DATE},
+      </if>
+      <if test="carBackDate != null">
+        #{carBackDate,jdbcType=DATE},
+      </if>
+      <if test="carDispatchStatus != null">
+        #{carDispatchStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.CarDispatch">
+    update car_dispatch
+    <set>
+      <if test="carId != null">
+        car_id = #{carId,jdbcType=INTEGER},
+      </if>
+      <if test="deliverGoodsId != null">
+        deliver_goods_id = #{deliverGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="carGoDate != null">
+        car_go_date = #{carGoDate,jdbcType=DATE},
+      </if>
+      <if test="carBackDate != null">
+        car_back_date = #{carBackDate,jdbcType=DATE},
+      </if>
+      <if test="carDispatchStatus != null">
+        car_dispatch_status = #{carDispatchStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where car_dispatch_id = #{carDispatchId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.CarDispatch">
+    update car_dispatch
+    set car_id = #{carId,jdbcType=INTEGER},
+      deliver_goods_id = #{deliverGoodsId,jdbcType=VARCHAR},
+      car_go_date = #{carGoDate,jdbcType=DATE},
+      car_back_date = #{carBackDate,jdbcType=DATE},
+      car_dispatch_status = #{carDispatchStatus,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where car_dispatch_id = #{carDispatchId,jdbcType=VARCHAR}
+  </update>
+</mapper>

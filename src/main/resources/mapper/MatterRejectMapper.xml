@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.MatterRejectMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.MatterReject">
+    <id column="matter_reject_id" jdbcType="VARCHAR" property="matterRejectId" />
+    <result column="matter_id" jdbcType="VARCHAR" property="matterId" />
+    <result column="matter_user_id" jdbcType="VARCHAR" property="matterUserId" />
+    <result column="matter_reject_date" jdbcType="DATE" property="matterRejectDate" />
+    <result column="matter_reject_reason" jdbcType="VARCHAR" property="matterRejectReason" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    matter_reject_id, matter_id, matter_user_id, matter_reject_date, matter_reject_reason
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from matter_reject
+    where matter_reject_id = #{matterRejectId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from matter_reject
+    where matter_reject_id = #{matterRejectId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.MatterReject">
+    insert into matter_reject (matter_reject_id, matter_id, matter_user_id, 
+      matter_reject_date, matter_reject_reason)
+    values (#{matterRejectId,jdbcType=VARCHAR}, #{matterId,jdbcType=VARCHAR}, #{matterUserId,jdbcType=VARCHAR}, 
+      #{matterRejectDate,jdbcType=DATE}, #{matterRejectReason,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.MatterReject">
+    insert into matter_reject
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="matterRejectId != null">
+        matter_reject_id,
+      </if>
+      <if test="matterId != null">
+        matter_id,
+      </if>
+      <if test="matterUserId != null">
+        matter_user_id,
+      </if>
+      <if test="matterRejectDate != null">
+        matter_reject_date,
+      </if>
+      <if test="matterRejectReason != null">
+        matter_reject_reason,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="matterRejectId != null">
+        #{matterRejectId,jdbcType=VARCHAR},
+      </if>
+      <if test="matterId != null">
+        #{matterId,jdbcType=VARCHAR},
+      </if>
+      <if test="matterUserId != null">
+        #{matterUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="matterRejectDate != null">
+        #{matterRejectDate,jdbcType=DATE},
+      </if>
+      <if test="matterRejectReason != null">
+        #{matterRejectReason,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.MatterReject">
+    update matter_reject
+    <set>
+      <if test="matterId != null">
+        matter_id = #{matterId,jdbcType=VARCHAR},
+      </if>
+      <if test="matterUserId != null">
+        matter_user_id = #{matterUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="matterRejectDate != null">
+        matter_reject_date = #{matterRejectDate,jdbcType=DATE},
+      </if>
+      <if test="matterRejectReason != null">
+        matter_reject_reason = #{matterRejectReason,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where matter_reject_id = #{matterRejectId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.MatterReject">
+    update matter_reject
+    set matter_id = #{matterId,jdbcType=VARCHAR},
+      matter_user_id = #{matterUserId,jdbcType=VARCHAR},
+      matter_reject_date = #{matterRejectDate,jdbcType=DATE},
+      matter_reject_reason = #{matterRejectReason,jdbcType=VARCHAR}
+    where matter_reject_id = #{matterRejectId,jdbcType=VARCHAR}
+  </update>
+  <select id="findMatterReject" resultMap="BaseResultMap">
+    select * from matter_reject
+  </select>
+  <select id="findMatterRejectCount" resultType="java.lang.Integer">
+    select count(*) from matter_reject
+  </select>
+</mapper>

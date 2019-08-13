@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.TakeGoodsMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.TakeGoods">
+    <id column="take_goods_id" jdbcType="VARCHAR" property="takeGoodsId" />
+    <result column="out_goods_id" jdbcType="VARCHAR" property="outGoodsId" />
+    <result column="take_goods_people" jdbcType="VARCHAR" property="takeGoodsPeople" />
+    <result column="take_goods_remark" jdbcType="VARCHAR" property="takeGoodsRemark" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    take_goods_id, out_goods_id, take_goods_people, take_goods_remark, processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from take_goods
+    where take_goods_id = #{takeGoodsId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from take_goods
+    where take_goods_id = #{takeGoodsId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.TakeGoods">
+    insert into take_goods (take_goods_id, out_goods_id, take_goods_people, 
+      take_goods_remark, processinstance_id)
+    values (#{takeGoodsId,jdbcType=VARCHAR}, #{outGoodsId,jdbcType=VARCHAR}, #{takeGoodsPeople,jdbcType=VARCHAR}, 
+      #{takeGoodsRemark,jdbcType=VARCHAR}, #{processinstanceId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.TakeGoods">
+    insert into take_goods
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="takeGoodsId != null">
+        take_goods_id,
+      </if>
+      <if test="outGoodsId != null">
+        out_goods_id,
+      </if>
+      <if test="takeGoodsPeople != null">
+        take_goods_people,
+      </if>
+      <if test="takeGoodsRemark != null">
+        take_goods_remark,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="takeGoodsId != null">
+        #{takeGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="outGoodsId != null">
+        #{outGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="takeGoodsPeople != null">
+        #{takeGoodsPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="takeGoodsRemark != null">
+        #{takeGoodsRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.TakeGoods">
+    update take_goods
+    <set>
+      <if test="outGoodsId != null">
+        out_goods_id = #{outGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="takeGoodsPeople != null">
+        take_goods_people = #{takeGoodsPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="takeGoodsRemark != null">
+        take_goods_remark = #{takeGoodsRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where take_goods_id = #{takeGoodsId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.TakeGoods">
+    update take_goods
+    set out_goods_id = #{outGoodsId,jdbcType=VARCHAR},
+      take_goods_people = #{takeGoodsPeople,jdbcType=VARCHAR},
+      take_goods_remark = #{takeGoodsRemark,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where take_goods_id = #{takeGoodsId,jdbcType=VARCHAR}
+  </update>
+</mapper>

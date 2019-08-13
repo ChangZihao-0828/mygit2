@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.SysCustomerOrderMatterMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.SysCustomerOrderMatter">
+    <id column="sys_customer_matter_id" jdbcType="INTEGER" property="sysCustomerMatterId" />
+    <result column="customer_order_id" jdbcType="VARCHAR" property="customerOrderId" />
+    <result column="matter_id" jdbcType="VARCHAR" property="matterId" />
+    <result column="sys_amount" jdbcType="INTEGER" property="sysAmount" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    sys_customer_matter_id, customer_order_id, matter_id, sys_amount
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_customer_order_matter
+    where sys_customer_matter_id = #{sysCustomerMatterId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sys_customer_order_matter
+    where sys_customer_matter_id = #{sysCustomerMatterId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.SysCustomerOrderMatter">
+    insert into sys_customer_order_matter (sys_customer_matter_id, customer_order_id, 
+      matter_id, sys_amount)
+    values (#{sysCustomerMatterId,jdbcType=INTEGER}, #{customerOrderId,jdbcType=VARCHAR}, 
+      #{matterId,jdbcType=VARCHAR}, #{sysAmount,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.SysCustomerOrderMatter">
+    insert into sys_customer_order_matter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sysCustomerMatterId != null">
+        sys_customer_matter_id,
+      </if>
+      <if test="customerOrderId != null">
+        customer_order_id,
+      </if>
+      <if test="matterId != null">
+        matter_id,
+      </if>
+      <if test="sysAmount != null">
+        sys_amount,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sysCustomerMatterId != null">
+        #{sysCustomerMatterId,jdbcType=INTEGER},
+      </if>
+      <if test="customerOrderId != null">
+        #{customerOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="matterId != null">
+        #{matterId,jdbcType=VARCHAR},
+      </if>
+      <if test="sysAmount != null">
+        #{sysAmount,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.SysCustomerOrderMatter">
+    update sys_customer_order_matter
+    <set>
+      <if test="customerOrderId != null">
+        customer_order_id = #{customerOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="matterId != null">
+        matter_id = #{matterId,jdbcType=VARCHAR},
+      </if>
+      <if test="sysAmount != null">
+        sys_amount = #{sysAmount,jdbcType=INTEGER},
+      </if>
+    </set>
+    where sys_customer_matter_id = #{sysCustomerMatterId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.SysCustomerOrderMatter">
+    update sys_customer_order_matter
+    set customer_order_id = #{customerOrderId,jdbcType=VARCHAR},
+      matter_id = #{matterId,jdbcType=VARCHAR},
+      sys_amount = #{sysAmount,jdbcType=INTEGER}
+    where sys_customer_matter_id = #{sysCustomerMatterId,jdbcType=INTEGER}
+  </update>
+</mapper>

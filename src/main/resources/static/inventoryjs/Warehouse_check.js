@@ -1,10 +1,11 @@
-layui.use('table', function(){
+layui.use(['table','layer','jquery'], function(){
     var table = layui.table;
-
+    var layer = layui.layer;
+    var $ = layui.$;
     //第一个实例
     table.render({
         elem: '#demo'
-        ,url: '/init' //数据接口
+        ,url: '/warehouseCheck' //数据接口
         ,page: true //开启分页
         ,limit:5 //默认每一页显示的条数
         ,limits:[1,2,3,5,10,20,30,50]//提示的每页条数的列表
@@ -12,14 +13,14 @@ layui.use('table', function(){
         ,title:"仓库检查记录汇总" //设置导出文件时的标题
         ,loading:true
         ,cols: [[ //表头
-            {field: 'warehouse_check_id', title: '仓库检查单编号', width:"20%", sort: true, fixed: 'left',align:"center"}
-            ,{field: 'warehouse _id', title: '仓库编号', width:"10%",align:"center", sort: true}
-            ,{field: 'warehouse_check_user_id', title: '检查人', width:"10%",align:"center"}
-            ,{field: 'warehouse_check_date', title: '检查日期', width:"10%",align:"center", sort: true,templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
-            ,{field: 'warehouse_check_result', title: '检查结果', width: "10%",align:"center"}
-            ,{field: 'temperature_check', title: '温度检查', width: "10%",align:"center"}
-            ,{field: 'humidity_check', title: '湿度检查', width: "10%",align:"center"}
-            ,{field: 'sanitation_check', title: '卫生检查', width: "10%",align:"center"}
+            {field: 'warehouseCheckId', title: '仓库检查单编号', width:"20%", sort: true, fixed: 'left',align:"center"}
+            ,{field: 'warehouseId', title: '仓库编号', width:"10%",align:"center", sort: true}
+            ,{field: 'warehouseCheckUserId', title: '检查人', width:"10%",align:"center"}
+            ,{field: 'warehouseCheckDate', title: '检查日期', width:"10%",align:"center", sort: true,templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
+            ,{field: 'warehouseCheckResult', title: '检查结果', width: "10%",align:"center"}
+            ,{field: 'temperatureCheck', title: '温度检查', width: "10%",align:"center"}
+            ,{field: 'humidityCheck', title: '湿度检查', width: "10%",align:"center"}
+            ,{field: 'sanitationCheck', title: '卫生检查', width: "10%",align:"center"}
             , {field: 'op', title: '操作', width: "10%", align: "center", toolbar: "#barDemo"}
         ]]
     });
@@ -38,7 +39,7 @@ layui.use('table', function(){
                     area: ['1000px', '440px'],
                     maxmin: false,
                     anim: 1,
-                    title: "添加用户",
+                    title: "添加仓库检查单",
                     content: '/inventory/add_Warehouse_check',
                     zIndex: layer.zIndex, //重点1
                     success: function (layero) {
@@ -73,12 +74,12 @@ layui.use('table', function(){
         var data = obj.data; //获得当前行数据
         var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
         var tr = obj.tr; //获得当前行 tr 的DOM对象
+        if (layEvent === 'del') { //删除
 
-       if (layEvent === 'del') { //删除
 
             layer.confirm('真的删除行么', function (index) {
 
-                $.post("/del", {"id": data.id}, function () {
+                $.post("/del", {"id": data}, function () {
 
                     table.reload('demo', {
                         page: {
@@ -94,11 +95,11 @@ layui.use('table', function(){
             layer.open({
                 type: 2,
                 shade: true,
-                area: ['500px', '400px'],
+                area: ['1000px', '440px'],
                 maxmin: false,
                 anim: 1,
-                title: "修改用户",
-                content: '/forward/update',
+                title: "仓库检查单详情",
+                content: '/inventory/detail_Warehouse_check',
                 zIndex: layer.zIndex, //重点1
                 success: function (layero) {
                     layer.setTop(layero); //重点2
@@ -116,7 +117,11 @@ layui.use('table', function(){
                 }
             });
         }
+
+
+
     });
+
 
     /***********指定日期格式**********************/
         //指定日期转换格式
@@ -149,6 +154,5 @@ layui.use('table', function(){
             })
 
         }
-
 
 });

@@ -1,10 +1,11 @@
-layui.use('table', function(){
+layui.use(['table','layer','jquery'], function(){
     var table = layui.table;
-
+    var layer = layui.layer;
+    var $ = layui.$;
     //第一个实例
     table.render({
         elem: '#demo'
-        ,url: '/init' //数据接口
+        ,url: '/matterCheck' //数据接口
         ,page: true //开启分页
         ,limit:5 //默认每一页显示的条数
         ,limits:[1,2,3,5,10,20,30,50]//提示的每页条数的列表
@@ -40,8 +41,8 @@ layui.use('table', function(){
                     area: ['1000px', '440px'],
                     maxmin: false,
                     anim: 1,
-                    title: "添加用户",
-                    content: '/inventory/add_Material_check',
+                    title: "添加物料检查单",
+                    content: '/inventory/add_Matter_check',
                     zIndex: layer.zIndex, //重点1
                     success: function (layero) {
                         layer.setTop(layero); //重点2
@@ -96,11 +97,11 @@ layui.use('table', function(){
             layer.open({
                 type: 2,
                 shade: true,
-                area: ['500px', '400px'],
+                area: ['1000px', '440px'],
                 maxmin: false,
                 anim: 1,
-                title: "修改用户",
-                content: '/forward/update',
+                title: "物料检查单详情",
+                content: '/inventory/detail_Matter_check',
                 zIndex: layer.zIndex, //重点1
                 success: function (layero) {
                     layer.setTop(layero); //重点2
