@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.SupplierMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.Supplier">
+    <id column="supplier_id" jdbcType="VARCHAR" property="supplierId" />
+    <result column="supplier_name" jdbcType="VARCHAR" property="supplierName" />
+    <result column="supplier_pwd" jdbcType="VARCHAR" property="supplierPwd" />
+    <result column="supplier_contacts" jdbcType="VARCHAR" property="supplierContacts" />
+    <result column="supplier_creditIimit" jdbcType="INTEGER" property="supplierCreditiimit" />
+    <result column="supplier_shortName" jdbcType="VARCHAR" property="supplierShortname" />
+    <result column="supplier_telephone" jdbcType="INTEGER" property="supplierTelephone" />
+    <result column="supplier_email" jdbcType="VARCHAR" property="supplierEmail" />
+    <result column="supplier_address" jdbcType="VARCHAR" property="supplierAddress" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    supplier_id, supplier_name, supplier_pwd, supplier_contacts, supplier_creditIimit, 
+    supplier_shortName, supplier_telephone, supplier_email, supplier_address
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from supplier
+    where supplier_id = #{supplierId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from supplier
+    where supplier_id = #{supplierId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.Supplier">
+    insert into supplier (supplier_id, supplier_name, supplier_pwd, 
+      supplier_contacts, supplier_creditIimit, 
+      supplier_shortName, supplier_telephone, supplier_email, 
+      supplier_address)
+    values (#{supplierId,jdbcType=VARCHAR}, #{supplierName,jdbcType=VARCHAR}, #{supplierPwd,jdbcType=VARCHAR}, 
+      #{supplierContacts,jdbcType=VARCHAR}, #{supplierCreditiimit,jdbcType=INTEGER}, 
+      #{supplierShortname,jdbcType=VARCHAR}, #{supplierTelephone,jdbcType=INTEGER}, #{supplierEmail,jdbcType=VARCHAR}, 
+      #{supplierAddress,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.Supplier">
+    insert into supplier
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="supplierId != null">
+        supplier_id,
+      </if>
+      <if test="supplierName != null">
+        supplier_name,
+      </if>
+      <if test="supplierPwd != null">
+        supplier_pwd,
+      </if>
+      <if test="supplierContacts != null">
+        supplier_contacts,
+      </if>
+      <if test="supplierCreditiimit != null">
+        supplier_creditIimit,
+      </if>
+      <if test="supplierShortname != null">
+        supplier_shortName,
+      </if>
+      <if test="supplierTelephone != null">
+        supplier_telephone,
+      </if>
+      <if test="supplierEmail != null">
+        supplier_email,
+      </if>
+      <if test="supplierAddress != null">
+        supplier_address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="supplierId != null">
+        #{supplierId,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierName != null">
+        #{supplierName,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierPwd != null">
+        #{supplierPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierContacts != null">
+        #{supplierContacts,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierCreditiimit != null">
+        #{supplierCreditiimit,jdbcType=INTEGER},
+      </if>
+      <if test="supplierShortname != null">
+        #{supplierShortname,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierTelephone != null">
+        #{supplierTelephone,jdbcType=INTEGER},
+      </if>
+      <if test="supplierEmail != null">
+        #{supplierEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierAddress != null">
+        #{supplierAddress,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.Supplier">
+    update supplier
+    <set>
+      <if test="supplierName != null">
+        supplier_name = #{supplierName,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierPwd != null">
+        supplier_pwd = #{supplierPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierContacts != null">
+        supplier_contacts = #{supplierContacts,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierCreditiimit != null">
+        supplier_creditIimit = #{supplierCreditiimit,jdbcType=INTEGER},
+      </if>
+      <if test="supplierShortname != null">
+        supplier_shortName = #{supplierShortname,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierTelephone != null">
+        supplier_telephone = #{supplierTelephone,jdbcType=INTEGER},
+      </if>
+      <if test="supplierEmail != null">
+        supplier_email = #{supplierEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierAddress != null">
+        supplier_address = #{supplierAddress,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where supplier_id = #{supplierId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.Supplier">
+    update supplier
+    set supplier_name = #{supplierName,jdbcType=VARCHAR},
+      supplier_pwd = #{supplierPwd,jdbcType=VARCHAR},
+      supplier_contacts = #{supplierContacts,jdbcType=VARCHAR},
+      supplier_creditIimit = #{supplierCreditiimit,jdbcType=INTEGER},
+      supplier_shortName = #{supplierShortname,jdbcType=VARCHAR},
+      supplier_telephone = #{supplierTelephone,jdbcType=INTEGER},
+      supplier_email = #{supplierEmail,jdbcType=VARCHAR},
+      supplier_address = #{supplierAddress,jdbcType=VARCHAR}
+    where supplier_id = #{supplierId,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.OutEquipGoodsMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.OutEquipGoods">
+    <id column="out_equip_goods_id" jdbcType="VARCHAR" property="outEquipGoodsId" />
+    <result column="out_goods_id" jdbcType="VARCHAR" property="outGoodsId" />
+    <result column="out_equip_goods_beginTime" jdbcType="DATE" property="outEquipGoodsBegintime" />
+    <result column="out_equip_goods_endTime" jdbcType="DATE" property="outEquipGoodsEndtime" />
+    <result column="out_equip_goods_people" jdbcType="VARCHAR" property="outEquipGoodsPeople" />
+    <result column="out_equip_goods_status" jdbcType="VARCHAR" property="outEquipGoodsStatus" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    out_equip_goods_id, out_goods_id, out_equip_goods_beginTime, out_equip_goods_endTime, 
+    out_equip_goods_people, out_equip_goods_status, processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from out_equip_goods
+    where out_equip_goods_id = #{outEquipGoodsId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from out_equip_goods
+    where out_equip_goods_id = #{outEquipGoodsId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.OutEquipGoods">
+    insert into out_equip_goods (out_equip_goods_id, out_goods_id, out_equip_goods_beginTime, 
+      out_equip_goods_endTime, out_equip_goods_people, 
+      out_equip_goods_status, processinstance_id)
+    values (#{outEquipGoodsId,jdbcType=VARCHAR}, #{outGoodsId,jdbcType=VARCHAR}, #{outEquipGoodsBegintime,jdbcType=DATE}, 
+      #{outEquipGoodsEndtime,jdbcType=DATE}, #{outEquipGoodsPeople,jdbcType=VARCHAR}, 
+      #{outEquipGoodsStatus,jdbcType=VARCHAR}, #{processinstanceId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.OutEquipGoods">
+    insert into out_equip_goods
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="outEquipGoodsId != null">
+        out_equip_goods_id,
+      </if>
+      <if test="outGoodsId != null">
+        out_goods_id,
+      </if>
+      <if test="outEquipGoodsBegintime != null">
+        out_equip_goods_beginTime,
+      </if>
+      <if test="outEquipGoodsEndtime != null">
+        out_equip_goods_endTime,
+      </if>
+      <if test="outEquipGoodsPeople != null">
+        out_equip_goods_people,
+      </if>
+      <if test="outEquipGoodsStatus != null">
+        out_equip_goods_status,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="outEquipGoodsId != null">
+        #{outEquipGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="outGoodsId != null">
+        #{outGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="outEquipGoodsBegintime != null">
+        #{outEquipGoodsBegintime,jdbcType=DATE},
+      </if>
+      <if test="outEquipGoodsEndtime != null">
+        #{outEquipGoodsEndtime,jdbcType=DATE},
+      </if>
+      <if test="outEquipGoodsPeople != null">
+        #{outEquipGoodsPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="outEquipGoodsStatus != null">
+        #{outEquipGoodsStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.OutEquipGoods">
+    update out_equip_goods
+    <set>
+      <if test="outGoodsId != null">
+        out_goods_id = #{outGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="outEquipGoodsBegintime != null">
+        out_equip_goods_beginTime = #{outEquipGoodsBegintime,jdbcType=DATE},
+      </if>
+      <if test="outEquipGoodsEndtime != null">
+        out_equip_goods_endTime = #{outEquipGoodsEndtime,jdbcType=DATE},
+      </if>
+      <if test="outEquipGoodsPeople != null">
+        out_equip_goods_people = #{outEquipGoodsPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="outEquipGoodsStatus != null">
+        out_equip_goods_status = #{outEquipGoodsStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where out_equip_goods_id = #{outEquipGoodsId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.OutEquipGoods">
+    update out_equip_goods
+    set out_goods_id = #{outGoodsId,jdbcType=VARCHAR},
+      out_equip_goods_beginTime = #{outEquipGoodsBegintime,jdbcType=DATE},
+      out_equip_goods_endTime = #{outEquipGoodsEndtime,jdbcType=DATE},
+      out_equip_goods_people = #{outEquipGoodsPeople,jdbcType=VARCHAR},
+      out_equip_goods_status = #{outEquipGoodsStatus,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where out_equip_goods_id = #{outEquipGoodsId,jdbcType=VARCHAR}
+  </update>
+</mapper>

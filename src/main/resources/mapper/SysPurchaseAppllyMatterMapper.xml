@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.SysPurchaseAppllyMatterMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.SysPurchaseAppllyMatter">
+    <id column="sys_purchase_applly_matter_id" jdbcType="INTEGER" property="sysPurchaseAppllyMatterId" />
+    <result column="purchase_applly_order_id" jdbcType="VARCHAR" property="purchaseAppllyOrderId" />
+    <result column="matter_id" jdbcType="VARCHAR" property="matterId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    sys_purchase_applly_matter_id, purchase_applly_order_id, matter_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_purchase_applly_matter
+    where sys_purchase_applly_matter_id = #{sysPurchaseAppllyMatterId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sys_purchase_applly_matter
+    where sys_purchase_applly_matter_id = #{sysPurchaseAppllyMatterId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.SysPurchaseAppllyMatter">
+    insert into sys_purchase_applly_matter (sys_purchase_applly_matter_id, purchase_applly_order_id, 
+      matter_id)
+    values (#{sysPurchaseAppllyMatterId,jdbcType=INTEGER}, #{purchaseAppllyOrderId,jdbcType=VARCHAR}, 
+      #{matterId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.SysPurchaseAppllyMatter">
+    insert into sys_purchase_applly_matter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sysPurchaseAppllyMatterId != null">
+        sys_purchase_applly_matter_id,
+      </if>
+      <if test="purchaseAppllyOrderId != null">
+        purchase_applly_order_id,
+      </if>
+      <if test="matterId != null">
+        matter_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sysPurchaseAppllyMatterId != null">
+        #{sysPurchaseAppllyMatterId,jdbcType=INTEGER},
+      </if>
+      <if test="purchaseAppllyOrderId != null">
+        #{purchaseAppllyOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="matterId != null">
+        #{matterId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.SysPurchaseAppllyMatter">
+    update sys_purchase_applly_matter
+    <set>
+      <if test="purchaseAppllyOrderId != null">
+        purchase_applly_order_id = #{purchaseAppllyOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="matterId != null">
+        matter_id = #{matterId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where sys_purchase_applly_matter_id = #{sysPurchaseAppllyMatterId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.SysPurchaseAppllyMatter">
+    update sys_purchase_applly_matter
+    set purchase_applly_order_id = #{purchaseAppllyOrderId,jdbcType=VARCHAR},
+      matter_id = #{matterId,jdbcType=VARCHAR}
+    where sys_purchase_applly_matter_id = #{sysPurchaseAppllyMatterId,jdbcType=INTEGER}
+  </update>
+</mapper>

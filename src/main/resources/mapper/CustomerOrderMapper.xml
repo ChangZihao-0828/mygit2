@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.CustomerOrderMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.CustomerOrder">
+    <id column="customer_order_id" jdbcType="VARCHAR" property="customerOrderId" />
+    <result column="customer_order_type" jdbcType="VARCHAR" property="customerOrderType" />
+    <result column="customer_order_declaration" jdbcType="VARCHAR" property="customerOrderDeclaration" />
+    <result column="customer_getGoodsTime" jdbcType="DATE" property="customerGetgoodstime" />
+    <result column="customer_order_linkman" jdbcType="VARCHAR" property="customerOrderLinkman" />
+    <result column="customer_order_address" jdbcType="VARCHAR" property="customerOrderAddress" />
+    <result column="customer_order_name_id" jdbcType="VARCHAR" property="customerOrderNameId" />
+    <result column="customer_order_getGoodsType" jdbcType="VARCHAR" property="customerOrderGetgoodstype" />
+    <result column="customer_order_modeOfPayment" jdbcType="VARCHAR" property="customerOrderModeofpayment" />
+    <result column="customer_order_state" jdbcType="VARCHAR" property="customerOrderState" />
+    <result column="customer_order_time" jdbcType="DATE" property="customerOrderTime" />
+    <result column="customer_order_rests" jdbcType="VARCHAR" property="customerOrderRests" />
+    <result column="customer_order_order_remark" jdbcType="VARCHAR" property="customerOrderOrderRemark" />
+    <result column="customer_orderPackR" jdbcType="VARCHAR" property="customerOrderpackr" />
+    <result column="customer_order_DPTR" jdbcType="VARCHAR" property="customerOrderDptr" />
+    <result column="customer_order_SMR" jdbcType="VARCHAR" property="customerOrderSmr" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    customer_order_id, customer_order_type, customer_order_declaration, customer_getGoodsTime, 
+    customer_order_linkman, customer_order_address, customer_order_name_id, customer_order_getGoodsType, 
+    customer_order_modeOfPayment, customer_order_state, customer_order_time, customer_order_rests, 
+    customer_order_order_remark, customer_orderPackR, customer_order_DPTR, customer_order_SMR, 
+    processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from customer_order
+    where customer_order_id = #{customerOrderId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from customer_order
+    where customer_order_id = #{customerOrderId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.CustomerOrder">
+    insert into customer_order (customer_order_id, customer_order_type, 
+      customer_order_declaration, customer_getGoodsTime, 
+      customer_order_linkman, customer_order_address, 
+      customer_order_name_id, customer_order_getGoodsType, 
+      customer_order_modeOfPayment, customer_order_state, 
+      customer_order_time, customer_order_rests, customer_order_order_remark, 
+      customer_orderPackR, customer_order_DPTR, 
+      customer_order_SMR, processinstance_id)
+    values (#{customerOrderId,jdbcType=VARCHAR}, #{customerOrderType,jdbcType=VARCHAR}, 
+      #{customerOrderDeclaration,jdbcType=VARCHAR}, #{customerGetgoodstime,jdbcType=DATE}, 
+      #{customerOrderLinkman,jdbcType=VARCHAR}, #{customerOrderAddress,jdbcType=VARCHAR}, 
+      #{customerOrderNameId,jdbcType=VARCHAR}, #{customerOrderGetgoodstype,jdbcType=VARCHAR}, 
+      #{customerOrderModeofpayment,jdbcType=VARCHAR}, #{customerOrderState,jdbcType=VARCHAR}, 
+      #{customerOrderTime,jdbcType=DATE}, #{customerOrderRests,jdbcType=VARCHAR}, #{customerOrderOrderRemark,jdbcType=VARCHAR}, 
+      #{customerOrderpackr,jdbcType=VARCHAR}, #{customerOrderDptr,jdbcType=VARCHAR}, 
+      #{customerOrderSmr,jdbcType=VARCHAR}, #{processinstanceId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.CustomerOrder">
+    insert into customer_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="customerOrderId != null">
+        customer_order_id,
+      </if>
+      <if test="customerOrderType != null">
+        customer_order_type,
+      </if>
+      <if test="customerOrderDeclaration != null">
+        customer_order_declaration,
+      </if>
+      <if test="customerGetgoodstime != null">
+        customer_getGoodsTime,
+      </if>
+      <if test="customerOrderLinkman != null">
+        customer_order_linkman,
+      </if>
+      <if test="customerOrderAddress != null">
+        customer_order_address,
+      </if>
+      <if test="customerOrderNameId != null">
+        customer_order_name_id,
+      </if>
+      <if test="customerOrderGetgoodstype != null">
+        customer_order_getGoodsType,
+      </if>
+      <if test="customerOrderModeofpayment != null">
+        customer_order_modeOfPayment,
+      </if>
+      <if test="customerOrderState != null">
+        customer_order_state,
+      </if>
+      <if test="customerOrderTime != null">
+        customer_order_time,
+      </if>
+      <if test="customerOrderRests != null">
+        customer_order_rests,
+      </if>
+      <if test="customerOrderOrderRemark != null">
+        customer_order_order_remark,
+      </if>
+      <if test="customerOrderpackr != null">
+        customer_orderPackR,
+      </if>
+      <if test="customerOrderDptr != null">
+        customer_order_DPTR,
+      </if>
+      <if test="customerOrderSmr != null">
+        customer_order_SMR,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="customerOrderId != null">
+        #{customerOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderType != null">
+        #{customerOrderType,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderDeclaration != null">
+        #{customerOrderDeclaration,jdbcType=VARCHAR},
+      </if>
+      <if test="customerGetgoodstime != null">
+        #{customerGetgoodstime,jdbcType=DATE},
+      </if>
+      <if test="customerOrderLinkman != null">
+        #{customerOrderLinkman,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderAddress != null">
+        #{customerOrderAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderNameId != null">
+        #{customerOrderNameId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderGetgoodstype != null">
+        #{customerOrderGetgoodstype,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderModeofpayment != null">
+        #{customerOrderModeofpayment,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderState != null">
+        #{customerOrderState,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderTime != null">
+        #{customerOrderTime,jdbcType=DATE},
+      </if>
+      <if test="customerOrderRests != null">
+        #{customerOrderRests,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderOrderRemark != null">
+        #{customerOrderOrderRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderpackr != null">
+        #{customerOrderpackr,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderDptr != null">
+        #{customerOrderDptr,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderSmr != null">
+        #{customerOrderSmr,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.CustomerOrder">
+    update customer_order
+    <set>
+      <if test="customerOrderType != null">
+        customer_order_type = #{customerOrderType,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderDeclaration != null">
+        customer_order_declaration = #{customerOrderDeclaration,jdbcType=VARCHAR},
+      </if>
+      <if test="customerGetgoodstime != null">
+        customer_getGoodsTime = #{customerGetgoodstime,jdbcType=DATE},
+      </if>
+      <if test="customerOrderLinkman != null">
+        customer_order_linkman = #{customerOrderLinkman,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderAddress != null">
+        customer_order_address = #{customerOrderAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderNameId != null">
+        customer_order_name_id = #{customerOrderNameId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderGetgoodstype != null">
+        customer_order_getGoodsType = #{customerOrderGetgoodstype,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderModeofpayment != null">
+        customer_order_modeOfPayment = #{customerOrderModeofpayment,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderState != null">
+        customer_order_state = #{customerOrderState,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderTime != null">
+        customer_order_time = #{customerOrderTime,jdbcType=DATE},
+      </if>
+      <if test="customerOrderRests != null">
+        customer_order_rests = #{customerOrderRests,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderOrderRemark != null">
+        customer_order_order_remark = #{customerOrderOrderRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderpackr != null">
+        customer_orderPackR = #{customerOrderpackr,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderDptr != null">
+        customer_order_DPTR = #{customerOrderDptr,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderSmr != null">
+        customer_order_SMR = #{customerOrderSmr,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where customer_order_id = #{customerOrderId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.CustomerOrder">
+    update customer_order
+    set customer_order_type = #{customerOrderType,jdbcType=VARCHAR},
+      customer_order_declaration = #{customerOrderDeclaration,jdbcType=VARCHAR},
+      customer_getGoodsTime = #{customerGetgoodstime,jdbcType=DATE},
+      customer_order_linkman = #{customerOrderLinkman,jdbcType=VARCHAR},
+      customer_order_address = #{customerOrderAddress,jdbcType=VARCHAR},
+      customer_order_name_id = #{customerOrderNameId,jdbcType=VARCHAR},
+      customer_order_getGoodsType = #{customerOrderGetgoodstype,jdbcType=VARCHAR},
+      customer_order_modeOfPayment = #{customerOrderModeofpayment,jdbcType=VARCHAR},
+      customer_order_state = #{customerOrderState,jdbcType=VARCHAR},
+      customer_order_time = #{customerOrderTime,jdbcType=DATE},
+      customer_order_rests = #{customerOrderRests,jdbcType=VARCHAR},
+      customer_order_order_remark = #{customerOrderOrderRemark,jdbcType=VARCHAR},
+      customer_orderPackR = #{customerOrderpackr,jdbcType=VARCHAR},
+      customer_order_DPTR = #{customerOrderDptr,jdbcType=VARCHAR},
+      customer_order_SMR = #{customerOrderSmr,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where customer_order_id = #{customerOrderId,jdbcType=VARCHAR}
+  </update>
+</mapper>

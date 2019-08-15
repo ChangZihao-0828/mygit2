@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.CarDeployLineMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.CarDeployLine">
+    <id column="car_deploy_line_id" jdbcType="VARCHAR" property="carDeployLineId" />
+    <result column="car_id" jdbcType="INTEGER" property="carId" />
+    <result column="deliver_goods_id" jdbcType="VARCHAR" property="deliverGoodsId" />
+    <result column="car_from_site" jdbcType="VARCHAR" property="carFromSite" />
+    <result column="car_to_site" jdbcType="VARCHAR" property="carToSite" />
+    <result column="car_dispatch_date" jdbcType="DATE" property="carDispatchDate" />
+    <result column="car_mileage" jdbcType="VARCHAR" property="carMileage" />
+    <result column="car_price" jdbcType="VARCHAR" property="carPrice" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    car_deploy_line_id, car_id, deliver_goods_id, car_from_site, car_to_site, car_dispatch_date, 
+    car_mileage, car_price, processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from car_deploy_line
+    where car_deploy_line_id = #{carDeployLineId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from car_deploy_line
+    where car_deploy_line_id = #{carDeployLineId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.CarDeployLine">
+    insert into car_deploy_line (car_deploy_line_id, car_id, deliver_goods_id, 
+      car_from_site, car_to_site, car_dispatch_date, 
+      car_mileage, car_price, processinstance_id
+      )
+    values (#{carDeployLineId,jdbcType=VARCHAR}, #{carId,jdbcType=INTEGER}, #{deliverGoodsId,jdbcType=VARCHAR}, 
+      #{carFromSite,jdbcType=VARCHAR}, #{carToSite,jdbcType=VARCHAR}, #{carDispatchDate,jdbcType=DATE}, 
+      #{carMileage,jdbcType=VARCHAR}, #{carPrice,jdbcType=VARCHAR}, #{processinstanceId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.CarDeployLine">
+    insert into car_deploy_line
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="carDeployLineId != null">
+        car_deploy_line_id,
+      </if>
+      <if test="carId != null">
+        car_id,
+      </if>
+      <if test="deliverGoodsId != null">
+        deliver_goods_id,
+      </if>
+      <if test="carFromSite != null">
+        car_from_site,
+      </if>
+      <if test="carToSite != null">
+        car_to_site,
+      </if>
+      <if test="carDispatchDate != null">
+        car_dispatch_date,
+      </if>
+      <if test="carMileage != null">
+        car_mileage,
+      </if>
+      <if test="carPrice != null">
+        car_price,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="carDeployLineId != null">
+        #{carDeployLineId,jdbcType=VARCHAR},
+      </if>
+      <if test="carId != null">
+        #{carId,jdbcType=INTEGER},
+      </if>
+      <if test="deliverGoodsId != null">
+        #{deliverGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="carFromSite != null">
+        #{carFromSite,jdbcType=VARCHAR},
+      </if>
+      <if test="carToSite != null">
+        #{carToSite,jdbcType=VARCHAR},
+      </if>
+      <if test="carDispatchDate != null">
+        #{carDispatchDate,jdbcType=DATE},
+      </if>lias
+      <if test="carMileage != null">
+        #{carMileage,jdbcType=VARCHAR},
+      </if>
+      <if test="carPrice != null">
+        #{carPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.CarDeployLine">
+    update car_deploy_line
+    <set>
+      <if test="carId != null">
+        car_id = #{carId,jdbcType=INTEGER},
+      </if>
+      <if test="deliverGoodsId != null">
+        deliver_goods_id = #{deliverGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="carFromSite != null">
+        car_from_site = #{carFromSite,jdbcType=VARCHAR},
+      </if>
+      <if test="carToSite != null">
+        car_to_site = #{carToSite,jdbcType=VARCHAR},
+      </if>
+      <if test="carDispatchDate != null">
+        car_dispatch_date = #{carDispatchDate,jdbcType=DATE},
+      </if>
+      <if test="carMileage != null">
+        car_mileage = #{carMileage,jdbcType=VARCHAR},
+      </if>
+      <if test="carPrice != null">
+        car_price = #{carPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where car_deploy_line_id = #{carDeployLineId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.CarDeployLine">
+    update car_deploy_line
+    set car_id = #{carId,jdbcType=INTEGER},
+      deliver_goods_id = #{deliverGoodsId,jdbcType=VARCHAR},
+      car_from_site = #{carFromSite,jdbcType=VARCHAR},
+      car_to_site = #{carToSite,jdbcType=VARCHAR},
+      car_dispatch_date = #{carDispatchDate,jdbcType=DATE},
+      car_mileage = #{carMileage,jdbcType=VARCHAR},
+      car_price = #{carPrice,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where car_deploy_line_id = #{carDeployLineId,jdbcType=VARCHAR}
+  </update>
+</mapper>

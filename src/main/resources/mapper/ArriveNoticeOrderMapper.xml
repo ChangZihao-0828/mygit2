@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.ArriveNoticeOrderMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.ArriveNoticeOrder">
+    <id column="arrive_notice_order_id" jdbcType="VARCHAR" property="arriveNoticeOrderId" />
+    <result column="in_goods_id" jdbcType="VARCHAR" property="inGoodsId" />
+    <result column="in_goods_arrived_date" jdbcType="DATE" property="inGoodsArrivedDate" />
+    <result column="arrive_notice_order_deliver_goods_man" jdbcType="VARCHAR" property="arriveNoticeOrderDeliverGoodsMan" />
+    <result column="arrive_notice_order_status" jdbcType="VARCHAR" property="arriveNoticeOrderStatus" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    arrive_notice_order_id, in_goods_id, in_goods_arrived_date, arrive_notice_order_deliver_goods_man, 
+    arrive_notice_order_status, processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from arrive_notice_order
+    where arrive_notice_order_id = #{arriveNoticeOrderId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from arrive_notice_order
+    where arrive_notice_order_id = #{arriveNoticeOrderId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.ArriveNoticeOrder">
+    insert into arrive_notice_order (arrive_notice_order_id, in_goods_id, in_goods_arrived_date, 
+      arrive_notice_order_deliver_goods_man, arrive_notice_order_status, 
+      processinstance_id)
+    values (#{arriveNoticeOrderId,jdbcType=VARCHAR}, #{inGoodsId,jdbcType=VARCHAR}, #{inGoodsArrivedDate,jdbcType=DATE}, 
+      #{arriveNoticeOrderDeliverGoodsMan,jdbcType=VARCHAR}, #{arriveNoticeOrderStatus,jdbcType=VARCHAR}, 
+      #{processinstanceId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.ArriveNoticeOrder">
+    insert into arrive_notice_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="arriveNoticeOrderId != null">
+        arrive_notice_order_id,
+      </if>
+      <if test="inGoodsId != null">
+        in_goods_id,
+      </if>
+      <if test="inGoodsArrivedDate != null">
+        in_goods_arrived_date,
+      </if>
+      <if test="arriveNoticeOrderDeliverGoodsMan != null">
+        arrive_notice_order_deliver_goods_man,
+      </if>
+      <if test="arriveNoticeOrderStatus != null">
+        arrive_notice_order_status,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="arriveNoticeOrderId != null">
+        #{arriveNoticeOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="inGoodsId != null">
+        #{inGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="inGoodsArrivedDate != null">
+        #{inGoodsArrivedDate,jdbcType=DATE},
+      </if>
+      <if test="arriveNoticeOrderDeliverGoodsMan != null">
+        #{arriveNoticeOrderDeliverGoodsMan,jdbcType=VARCHAR},
+      </if>
+      <if test="arriveNoticeOrderStatus != null">
+        #{arriveNoticeOrderStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.ArriveNoticeOrder">
+    update arrive_notice_order
+    <set>
+      <if test="inGoodsId != null">
+        in_goods_id = #{inGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="inGoodsArrivedDate != null">
+        in_goods_arrived_date = #{inGoodsArrivedDate,jdbcType=DATE},
+      </if>
+      <if test="arriveNoticeOrderDeliverGoodsMan != null">
+        arrive_notice_order_deliver_goods_man = #{arriveNoticeOrderDeliverGoodsMan,jdbcType=VARCHAR},
+      </if>
+      <if test="arriveNoticeOrderStatus != null">
+        arrive_notice_order_status = #{arriveNoticeOrderStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where arrive_notice_order_id = #{arriveNoticeOrderId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.ArriveNoticeOrder">
+    update arrive_notice_order
+    set in_goods_id = #{inGoodsId,jdbcType=VARCHAR},
+      in_goods_arrived_date = #{inGoodsArrivedDate,jdbcType=DATE},
+      arrive_notice_order_deliver_goods_man = #{arriveNoticeOrderDeliverGoodsMan,jdbcType=VARCHAR},
+      arrive_notice_order_status = #{arriveNoticeOrderStatus,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where arrive_notice_order_id = #{arriveNoticeOrderId,jdbcType=VARCHAR}
+  </update>
+</mapper>

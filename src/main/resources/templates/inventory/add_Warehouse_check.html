@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{'/layui/css/layui.css'}" media="all">
+    <script th:src="@{'/layui/layui.js'}"></script>
+    <script th:src="@{'/inventoryjs/Warehouse_check.js'}"></script>
+</head>
+<body>
+<br>
+<h1>&nbsp;&nbsp;&nbsp;添加仓库检查</h1>
+<br/>
+<form class="layui-form" id="addFrm">
+    <table align="center" width="100%">
+        <tr >
+            <td colspan="2" align="center"><h2>基础信息</h2><hr/></td><td colspan="2" align="center"><h2>检查内容</h2><hr/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">仓库检查单号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="warehouseCheckId" lay-verify="title"  autocomplete="off" placeholder="请输入仓库检查单编号" class="layui-input" required="required">
+            </div><br/><br/></td>
+            <td align="center" width="15%">温度检查:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="temperatureCheck" lay-verify="title" autocomplete="off" class="layui-input" required="required">
+            </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">仓库编号：&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="warehouseId" lay-verify="title" autocomplete="off" placeholder="请输入检查的仓库编号" class="layui-input" required="required">
+            </div><br/><br/></td>
+            <td align="center" width="15%">湿度检查：&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="humidityCheck" lay-verify="title" autocomplete="off" class="layui-input" required="required">
+            </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">检查人:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="warehouseCheckUserId" lay-verify="title" autocomplete="off" placeholder="请输入检查人" class="layui-input" required="required">
+            </div><br/><br/></td>
+            <td align="center" width="15%">卫生检查：&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="sanitationCheck" lay-verify="title" autocomplete="off" class="layui-input" required="required">
+            </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">检查日期：&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="warehouseCheckDate" id="date" lay-verify="date" placeholder="年/月/日" autocomplete="off" class="layui-input" required="required">
+            </div><br/><br/></td>
+            <td align="center" width="15%">
+                检查结果：
+                <br/><br/></td>
+            <td width="35%">
+                <div class="layui-input-inline">
+                    <select name="warehouseCheckResult" lay-verify="required" lay-search="">
+                        <option value="不合格" th:required="required">不合格</option>
+                        <option value="合格">合格</option>
+                    </select>
+                </div><br/><br/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center">
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    layui.use(['form', 'layedit', 'laydate'], function() {
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate;
+
+        //日期
+        laydate.render({
+            elem: '#date'
+            ,trigger: 'click'
+        });
+
+        //日期时间选择器
+        laydate.render({
+            elem: '#test5'
+            ,type: 'datetime'
+            ,trigger: 'click'
+        });
+
+        //日期时间选择器
+        laydate.render({
+            elem: '#test6'
+            ,type: 'datetime'
+            ,trigger: 'click'
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            $.ajax({
+                url:"/addWarehouseCheck",
+                type:"post",
+                data:$("#addFrm").serialize(),
+                success:function () {
+                    //layer.msg("添加成功!!!",function(){
+                    //准备让父窗口刷新，并且关闭当前弹出的窗体
+                    window.parent.location.reload();
+                    //});
+                }
+            });
+            return false;
+        });
+
+    });
+</script>
+</body>
+</html>

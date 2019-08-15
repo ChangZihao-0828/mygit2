@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.CarMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.Car">
+    <id column="car_id" jdbcType="INTEGER" property="carId" />
+    <result column="car_type_id" jdbcType="INTEGER" property="carTypeId" />
+    <result column="car_brand" jdbcType="VARCHAR" property="carBrand" />
+    <result column="motorcade_id" jdbcType="INTEGER" property="motorcadeId" />
+    <result column="car_load" jdbcType="INTEGER" property="carLoad" />
+    <result column="car_bulk" jdbcType="INTEGER" property="carBulk" />
+    <result column="car_state" jdbcType="VARCHAR" property="carState" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    car_id, car_type_id, car_brand, motorcade_id, car_load, car_bulk, car_state
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from car
+    where car_id = #{carId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from car
+    where car_id = #{carId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.Car">
+    insert into car (car_id, car_type_id, car_brand, 
+      motorcade_id, car_load, car_bulk, 
+      car_state)
+    values (#{carId,jdbcType=INTEGER}, #{carTypeId,jdbcType=INTEGER}, #{carBrand,jdbcType=VARCHAR}, 
+      #{motorcadeId,jdbcType=INTEGER}, #{carLoad,jdbcType=INTEGER}, #{carBulk,jdbcType=INTEGER}, 
+      #{carState,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.Car">
+    insert into car
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="carId != null">
+        car_id,
+      </if>
+      <if test="carTypeId != null">
+        car_type_id,
+      </if>
+      <if test="carBrand != null">
+        car_brand,
+      </if>
+      <if test="motorcadeId != null">
+        motorcade_id,
+      </if>
+      <if test="carLoad != null">
+        car_load,
+      </if>
+      <if test="carBulk != null">
+        car_bulk,
+      </if>
+      <if test="carState != null">
+        car_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="carId != null">
+        #{carId,jdbcType=INTEGER},
+      </if>
+      <if test="carTypeId != null">
+        #{carTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="carBrand != null">
+        #{carBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="motorcadeId != null">
+        #{motorcadeId,jdbcType=INTEGER},
+      </if>
+      <if test="carLoad != null">
+        #{carLoad,jdbcType=INTEGER},
+      </if>
+      <if test="carBulk != null">
+        #{carBulk,jdbcType=INTEGER},
+      </if>
+      <if test="carState != null">
+        #{carState,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.Car">
+    update car
+    <set>
+      <if test="carTypeId != null">
+        car_type_id = #{carTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="carBrand != null">
+        car_brand = #{carBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="motorcadeId != null">
+        motorcade_id = #{motorcadeId,jdbcType=INTEGER},
+      </if>
+      <if test="carLoad != null">
+        car_load = #{carLoad,jdbcType=INTEGER},
+      </if>
+      <if test="carBulk != null">
+        car_bulk = #{carBulk,jdbcType=INTEGER},
+      </if>
+      <if test="carState != null">
+        car_state = #{carState,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where car_id = #{carId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.Car">
+    update car
+    set car_type_id = #{carTypeId,jdbcType=INTEGER},
+      car_brand = #{carBrand,jdbcType=VARCHAR},
+      motorcade_id = #{motorcadeId,jdbcType=INTEGER},
+      car_load = #{carLoad,jdbcType=INTEGER},
+      car_bulk = #{carBulk,jdbcType=INTEGER},
+      car_state = #{carState,jdbcType=VARCHAR}
+    where car_id = #{carId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.DeliverGoodsMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.DeliverGoods">
+    <id column="deliver_goods_id" jdbcType="VARCHAR" property="deliverGoodsId" />
+    <result column="Deliver_date" jdbcType="DATE" property="deliverDate" />
+    <result column="User_id" jdbcType="VARCHAR" property="userId" />
+    <result column="customer_order_id" jdbcType="VARCHAR" property="customerOrderId" />
+    <result column="Customer_id" jdbcType="VARCHAR" property="customerId" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    deliver_goods_id, Deliver_date, User_id, customer_order_id, Customer_id, processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from deliver_goods
+    where deliver_goods_id = #{deliverGoodsId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from deliver_goods
+    where deliver_goods_id = #{deliverGoodsId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.DeliverGoods">
+    insert into deliver_goods (deliver_goods_id, Deliver_date, User_id, 
+      customer_order_id, Customer_id, processinstance_id
+      )
+    values (#{deliverGoodsId,jdbcType=VARCHAR}, #{deliverDate,jdbcType=DATE}, #{userId,jdbcType=VARCHAR}, 
+      #{customerOrderId,jdbcType=VARCHAR}, #{customerId,jdbcType=VARCHAR}, #{processinstanceId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.DeliverGoods">
+    insert into deliver_goods
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="deliverGoodsId != null">
+        deliver_goods_id,
+      </if>
+      <if test="deliverDate != null">
+        Deliver_date,
+      </if>
+      <if test="userId != null">
+        User_id,
+      </if>
+      <if test="customerOrderId != null">
+        customer_order_id,
+      </if>
+      <if test="customerId != null">
+        Customer_id,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="deliverGoodsId != null">
+        #{deliverGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverDate != null">
+        #{deliverDate,jdbcType=DATE},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderId != null">
+        #{customerOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.DeliverGoods">
+    update deliver_goods
+    <set>
+      <if test="deliverDate != null">
+        Deliver_date = #{deliverDate,jdbcType=DATE},
+      </if>
+      <if test="userId != null">
+        User_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerOrderId != null">
+        customer_order_id = #{customerOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null">
+        Customer_id = #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where deliver_goods_id = #{deliverGoodsId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.DeliverGoods">
+    update deliver_goods
+    set Deliver_date = #{deliverDate,jdbcType=DATE},
+      User_id = #{userId,jdbcType=VARCHAR},
+      customer_order_id = #{customerOrderId,jdbcType=VARCHAR},
+      Customer_id = #{customerId,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where deliver_goods_id = #{deliverGoodsId,jdbcType=VARCHAR}
+  </update>
+</mapper>

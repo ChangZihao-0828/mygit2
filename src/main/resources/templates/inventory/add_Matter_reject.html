@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{'/layui/css/layui.css'}" media="all">
+    <script th:src="@{'/layui/layui.js'}"></script>
+    <script th:src="@{'/inventoryjs/Matter_reject.js'}"></script>
+</head>
+<body>
+<br/>
+<h1>&nbsp;&nbsp;&nbsp;添加物料报废单</h1>
+<br/>
+<form class="layui-form" id="addFrm">
+    <table align="center" width="100%">
+        <tr>
+            <td colspan="4"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>基础信息</b></h4><hr/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">物料报废单编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="matterRejectId" lay-verify="title" autocomplete="off" placeholder="请输入物料报废单编号" class="layui-input" required="required">
+            </div><br/><br/></td>
+            <td align="center" width="15%">报废人:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="matterUserId" lay-verify="title" placeholder="请输入报废人编号" autocomplete="off" class="layui-input" required="required">
+            </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">报废物料:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="matterUserCount" lay-verify="title" autocomplete="off" placeholder="请输入报废物料编号" class="layui-input" required="required">
+            </div><br/><br/></td>
+            <td align="center" width="15%">报废数量:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="matterUserCount" lay-verify="title" placeholder="请输入报废" autocomplete="off" class="layui-input" required="required">
+            </div><br/><br/></td>
+        </tr>
+        <tr>
+            <td align="center" width="15%">报废日期：&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="matterRejectDate" id="date" lay-verify="date" placeholder="年/月/日" autocomplete="off" class="layui-input" required="required">
+            </div><br/><br/></td>
+            <<td align="center" width="15%">报废原因:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td width="35%"><div class="layui-input-inline">
+                <input type="text" name="matterRejectReason" lay-verify="title" placeholder="请输入原因" autocomplete="off" class="layui-input" required="required">
+            </div><br/><br/></td>
+        </tr>
+    </table>
+    <br/>
+    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>物料详情</b></h4><hr/>
+    <table class="layui-table" lay-size="lg" width="80%">
+        <colgroup>
+            <col width="200">
+            <col width="200">
+            <col width="200">
+            <col width="200">
+            <col width="200">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>物料编号</th>
+            <th>物料名称</th>
+            <th>物料规格</th>
+            <th>物料重量</th>
+            <th>物料数量</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    <table width="100%">
+        <tr>
+            <td align="center">
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    layui.use(['form', 'layedit', 'laydate'], function() {
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate;
+
+        //日期
+        laydate.render({
+            elem: '#date'
+            ,trigger: 'click'
+        });
+
+        //日期时间选择器
+        laydate.render({
+            elem: '#test5'
+            ,type: 'datetime'
+            ,trigger: 'click'
+        });
+
+        //日期时间选择器
+        laydate.render({
+            elem: '#test6'
+            ,type: 'datetime'
+            ,trigger: 'click'
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            $.ajax({
+                url:"/addMatterReject",
+                type:"post",
+                data:$("#addFrm").serialize(),
+                success:function () {
+                    //layer.msg("添加成功!!!",function(){
+                    //准备让父窗口刷新，并且关闭当前弹出的窗体
+                    window.parent.location.reload();
+                    //});
+                }
+            });
+            return false;
+        });
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.PrepareGoodsMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.PrepareGoods">
+    <id column="prepare_goods_id" jdbcType="VARCHAR" property="prepareGoodsId" />
+    <result column="purchase_order_id" jdbcType="VARCHAR" property="purchaseOrderId" />
+    <result column="prepare_goods_time" jdbcType="DATE" property="prepareGoodsTime" />
+    <result column="prepare_goods_user_id" jdbcType="VARCHAR" property="prepareGoodsUserId" />
+    <result column="prepare_goods_status" jdbcType="VARCHAR" property="prepareGoodsStatus" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    prepare_goods_id, purchase_order_id, prepare_goods_time, prepare_goods_user_id, prepare_goods_status, 
+    processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from prepare_goods
+    where prepare_goods_id = #{prepareGoodsId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from prepare_goods
+    where prepare_goods_id = #{prepareGoodsId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.PrepareGoods">
+    insert into prepare_goods (prepare_goods_id, purchase_order_id, 
+      prepare_goods_time, prepare_goods_user_id, prepare_goods_status, 
+      processinstance_id)
+    values (#{prepareGoodsId,jdbcType=VARCHAR}, #{purchaseOrderId,jdbcType=VARCHAR}, 
+      #{prepareGoodsTime,jdbcType=DATE}, #{prepareGoodsUserId,jdbcType=VARCHAR}, #{prepareGoodsStatus,jdbcType=VARCHAR}, 
+      #{processinstanceId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.PrepareGoods">
+    insert into prepare_goods
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="prepareGoodsId != null">
+        prepare_goods_id,
+      </if>
+      <if test="purchaseOrderId != null">
+        purchase_order_id,
+      </if>
+      <if test="prepareGoodsTime != null">
+        prepare_goods_time,
+      </if>
+      <if test="prepareGoodsUserId != null">
+        prepare_goods_user_id,
+      </if>
+      <if test="prepareGoodsStatus != null">
+        prepare_goods_status,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="prepareGoodsId != null">
+        #{prepareGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="purchaseOrderId != null">
+        #{purchaseOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="prepareGoodsTime != null">
+        #{prepareGoodsTime,jdbcType=DATE},
+      </if>
+      <if test="prepareGoodsUserId != null">
+        #{prepareGoodsUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="prepareGoodsStatus != null">
+        #{prepareGoodsStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.PrepareGoods">
+    update prepare_goods
+    <set>
+      <if test="purchaseOrderId != null">
+        purchase_order_id = #{purchaseOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="prepareGoodsTime != null">
+        prepare_goods_time = #{prepareGoodsTime,jdbcType=DATE},
+      </if>
+      <if test="prepareGoodsUserId != null">
+        prepare_goods_user_id = #{prepareGoodsUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="prepareGoodsStatus != null">
+        prepare_goods_status = #{prepareGoodsStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where prepare_goods_id = #{prepareGoodsId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.PrepareGoods">
+    update prepare_goods
+    set purchase_order_id = #{purchaseOrderId,jdbcType=VARCHAR},
+      prepare_goods_time = #{prepareGoodsTime,jdbcType=DATE},
+      prepare_goods_user_id = #{prepareGoodsUserId,jdbcType=VARCHAR},
+      prepare_goods_status = #{prepareGoodsStatus,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where prepare_goods_id = #{prepareGoodsId,jdbcType=VARCHAR}
+  </update>
+</mapper>

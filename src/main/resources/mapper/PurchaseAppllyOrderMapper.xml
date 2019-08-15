@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.PurchaseAppllyOrderMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.PurchaseAppllyOrder">
+    <id column="purchase_applly_order_id" jdbcType="VARCHAR" property="purchaseAppllyOrderId" />
+    <result column="purchase_applly_order_beginTime" jdbcType="DATE" property="purchaseAppllyOrderBegintime" />
+    <result column="purchase_applly_order_endTime" jdbcType="DATE" property="purchaseAppllyOrderEndtime" />
+    <result column="purchase_applly_user_name" jdbcType="INTEGER" property="purchaseAppllyUserName" />
+    <result column="purchase_applly_remark" jdbcType="VARCHAR" property="purchaseAppllyRemark" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    purchase_applly_order_id, purchase_applly_order_beginTime, purchase_applly_order_endTime, 
+    purchase_applly_user_name, purchase_applly_remark, processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from purchase_applly_order
+    where purchase_applly_order_id = #{purchaseAppllyOrderId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from purchase_applly_order
+    where purchase_applly_order_id = #{purchaseAppllyOrderId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.PurchaseAppllyOrder">
+    insert into purchase_applly_order (purchase_applly_order_id, purchase_applly_order_beginTime, 
+      purchase_applly_order_endTime, purchase_applly_user_name, 
+      purchase_applly_remark, processinstance_id
+      )
+    values (#{purchaseAppllyOrderId,jdbcType=VARCHAR}, #{purchaseAppllyOrderBegintime,jdbcType=DATE}, 
+      #{purchaseAppllyOrderEndtime,jdbcType=DATE}, #{purchaseAppllyUserName,jdbcType=INTEGER}, 
+      #{purchaseAppllyRemark,jdbcType=VARCHAR}, #{processinstanceId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.PurchaseAppllyOrder">
+    insert into purchase_applly_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="purchaseAppllyOrderId != null">
+        purchase_applly_order_id,
+      </if>
+      <if test="purchaseAppllyOrderBegintime != null">
+        purchase_applly_order_beginTime,
+      </if>
+      <if test="purchaseAppllyOrderEndtime != null">
+        purchase_applly_order_endTime,
+      </if>
+      <if test="purchaseAppllyUserName != null">
+        purchase_applly_user_name,
+      </if>
+      <if test="purchaseAppllyRemark != null">
+        purchase_applly_remark,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="purchaseAppllyOrderId != null">
+        #{purchaseAppllyOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="purchaseAppllyOrderBegintime != null">
+        #{purchaseAppllyOrderBegintime,jdbcType=DATE},
+      </if>
+      <if test="purchaseAppllyOrderEndtime != null">
+        #{purchaseAppllyOrderEndtime,jdbcType=DATE},
+      </if>
+      <if test="purchaseAppllyUserName != null">
+        #{purchaseAppllyUserName,jdbcType=INTEGER},
+      </if>
+      <if test="purchaseAppllyRemark != null">
+        #{purchaseAppllyRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.PurchaseAppllyOrder">
+    update purchase_applly_order
+    <set>
+      <if test="purchaseAppllyOrderBegintime != null">
+        purchase_applly_order_beginTime = #{purchaseAppllyOrderBegintime,jdbcType=DATE},
+      </if>
+      <if test="purchaseAppllyOrderEndtime != null">
+        purchase_applly_order_endTime = #{purchaseAppllyOrderEndtime,jdbcType=DATE},
+      </if>
+      <if test="purchaseAppllyUserName != null">
+        purchase_applly_user_name = #{purchaseAppllyUserName,jdbcType=INTEGER},
+      </if>
+      <if test="purchaseAppllyRemark != null">
+        purchase_applly_remark = #{purchaseAppllyRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where purchase_applly_order_id = #{purchaseAppllyOrderId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.PurchaseAppllyOrder">
+    update purchase_applly_order
+    set purchase_applly_order_beginTime = #{purchaseAppllyOrderBegintime,jdbcType=DATE},
+      purchase_applly_order_endTime = #{purchaseAppllyOrderEndtime,jdbcType=DATE},
+      purchase_applly_user_name = #{purchaseAppllyUserName,jdbcType=INTEGER},
+      purchase_applly_remark = #{purchaseAppllyRemark,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where purchase_applly_order_id = #{purchaseAppllyOrderId,jdbcType=VARCHAR}
+  </update>
+</mapper>

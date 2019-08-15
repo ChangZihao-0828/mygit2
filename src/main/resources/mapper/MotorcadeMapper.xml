@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.MotorcadeMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.Motorcade">
+    <id column="motorcade_id" jdbcType="INTEGER" property="motorcadeId" />
+    <result column="motorcade_name" jdbcType="VARCHAR" property="motorcadeName" />
+    <result column="motorcade_persoon_count" jdbcType="INTEGER" property="motorcadePersoonCount" />
+    <result column="motorcade_build_date" jdbcType="DATE" property="motorcadeBuildDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    motorcade_id, motorcade_name, motorcade_persoon_count, motorcade_build_date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from motorcade
+    where motorcade_id = #{motorcadeId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from motorcade
+    where motorcade_id = #{motorcadeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.Motorcade">
+    insert into motorcade (motorcade_id, motorcade_name, motorcade_persoon_count, 
+      motorcade_build_date)
+    values (#{motorcadeId,jdbcType=INTEGER}, #{motorcadeName,jdbcType=VARCHAR}, #{motorcadePersoonCount,jdbcType=INTEGER}, 
+      #{motorcadeBuildDate,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.Motorcade">
+    insert into motorcade
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="motorcadeId != null">
+        motorcade_id,
+      </if>
+      <if test="motorcadeName != null">
+        motorcade_name,
+      </if>
+      <if test="motorcadePersoonCount != null">
+        motorcade_persoon_count,
+      </if>
+      <if test="motorcadeBuildDate != null">
+        motorcade_build_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="motorcadeId != null">
+        #{motorcadeId,jdbcType=INTEGER},
+      </if>
+      <if test="motorcadeName != null">
+        #{motorcadeName,jdbcType=VARCHAR},
+      </if>
+      <if test="motorcadePersoonCount != null">
+        #{motorcadePersoonCount,jdbcType=INTEGER},
+      </if>
+      <if test="motorcadeBuildDate != null">
+        #{motorcadeBuildDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.Motorcade">
+    update motorcade
+    <set>
+      <if test="motorcadeName != null">
+        motorcade_name = #{motorcadeName,jdbcType=VARCHAR},
+      </if>
+      <if test="motorcadePersoonCount != null">
+        motorcade_persoon_count = #{motorcadePersoonCount,jdbcType=INTEGER},
+      </if>
+      <if test="motorcadeBuildDate != null">
+        motorcade_build_date = #{motorcadeBuildDate,jdbcType=DATE},
+      </if>
+    </set>
+    where motorcade_id = #{motorcadeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.Motorcade">
+    update motorcade
+    set motorcade_name = #{motorcadeName,jdbcType=VARCHAR},
+      motorcade_persoon_count = #{motorcadePersoonCount,jdbcType=INTEGER},
+      motorcade_build_date = #{motorcadeBuildDate,jdbcType=DATE}
+    where motorcade_id = #{motorcadeId,jdbcType=INTEGER}
+  </update>
+</mapper>
