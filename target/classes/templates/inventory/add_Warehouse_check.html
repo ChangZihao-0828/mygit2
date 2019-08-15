@@ -19,7 +19,7 @@
         <tr>
             <td align="center" width="15%">仓库检查单号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="warehouseCheckId" lay-verify="title"  autocomplete="off" placeholder="请输入仓库检查单编号" class="layui-input" required="required">
+                <input type="text" name="warehouseCheckId" lay-verify="title"  autocomplete="off" placeholder="仓库检查单编号自动生成" class="layui-input" required="required"  disabled="disabled">
             </div><br/><br/></td>
             <td align="center" width="15%">温度检查:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
@@ -76,11 +76,12 @@
     </table>
 </form>
 <script>
-    layui.use(['form', 'layedit', 'laydate'], function() {
+    layui.use(['form', 'layedit', 'laydate','jquery'], function() {
         var form = layui.form
             , layer = layui.layer
             , layedit = layui.layedit
-            , laydate = layui.laydate;
+            , laydate = layui.laydate
+            , $=layui.$;
 
         //日期
         laydate.render({
@@ -109,6 +110,8 @@
                 type:"post",
                 data:$("#addFrm").serialize(),
                 success:function () {
+
+                    alert("添加成功")
                     //layer.msg("添加成功!!!",function(){
                     //准备让父窗口刷新，并且关闭当前弹出的窗体
                     window.parent.location.reload();

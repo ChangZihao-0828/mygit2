@@ -1,5 +1,7 @@
 package org.java.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,6 +12,7 @@ public class Motorcade  implements Serializable {
 
     private Integer motorcadePersoonCount;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date motorcadeBuildDate;
 
     public Integer getMotorcadeId() {

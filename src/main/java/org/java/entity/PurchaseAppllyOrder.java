@@ -1,13 +1,17 @@
 package org.java.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class PurchaseAppllyOrder  implements Serializable {
     private String purchaseAppllyOrderId;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date purchaseAppllyOrderBegintime;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date purchaseAppllyOrderEndtime;
 
     private Integer purchaseAppllyUserName;

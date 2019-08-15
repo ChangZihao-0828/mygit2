@@ -3,6 +3,52 @@
   <component name="ChangeListManager">
     <list default="true" id="700113a3-70c2-4a4d-be48-99d7b90702c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/ArriveNoticeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/ArriveNoticeOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/CarDeployLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/CarDeployLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/CarDispatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/CarDispatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/CustomerOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/CustomerOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/DeliverGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/DeliverGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/ExamineGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/ExamineGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/InEquipGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/InEquipGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/InGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/InGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/MatterCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/MatterCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/MatterReject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/MatterReject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/Motorcade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/Motorcade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/OutEquipGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/OutEquipGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/OutGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/OutGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/PrepareGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/PrepareGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseAppllyOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseAppllyOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/StockCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/StockCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehousePosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehousePosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseRegion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/inventory/add_Warehouse_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/inventory/add_Warehouse_check.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/ArriveNoticeOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/ArriveNoticeOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/CarDeployLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/CarDeployLine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/CarDispatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/CarDispatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/CustomerOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/CustomerOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/DeliverGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/DeliverGoods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/ExamineGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/ExamineGoods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/InEquipGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/InEquipGoods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/InGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/InGoods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/MatterCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/MatterCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/MatterReject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/MatterReject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/Motorcade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/Motorcade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/OutEquipGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/OutEquipGoods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/OutGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/OutGoods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/PrepareGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/PrepareGoods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/PurchaseAppllyOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/PurchaseAppllyOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/PurchaseOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/StockCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/StockCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/Warehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/Warehouse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/WarehouseCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/WarehouseCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/WarehousePosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/WarehousePosition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/WarehouseRegion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/WarehouseRegion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory/add_Warehouse_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory/add_Warehouse_check.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,6 +77,7 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="22" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="11" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.14" value="2" />
@@ -39,51 +86,51 @@
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="html" value="146" />
-          <entry key="java" value="217" />
+          <entry key="html" value="148" />
+          <entry key="java" value="260" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="100" />
+          <entry key="js" value="105" />
           <entry key="php" value="1" />
           <entry key="png" value="52" />
-          <entry key="xml" value="93" />
+          <entry key="xml" value="94" />
           <entry key="yml" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="HTML" value="146" />
+          <entry key="HTML" value="148" />
           <entry key="Image" value="53" />
-          <entry key="JAVA" value="217" />
-          <entry key="JavaScript" value="100" />
+          <entry key="JAVA" value="260" />
+          <entry key="JavaScript" value="105" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="93" />
+          <entry key="XML" value="94" />
           <entry key="YAML" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="31" />
-          <entry key="html" value="3194" />
-          <entry key="java" value="1849" />
+          <entry key="html" value="3269" />
+          <entry key="java" value="2551" />
           <entry key="js" value="918" />
-          <entry key="txt" value="227" />
+          <entry key="txt" value="247" />
           <entry key="xml" value="499" />
           <entry key="yml" value="209" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3194" />
-          <entry key="JAVA" value="1849" />
+          <entry key="HTML" value="3269" />
+          <entry key="JAVA" value="2551" />
           <entry key="JavaScript" value="918" />
-          <entry key="PLAIN_TEXT" value="258" />
+          <entry key="PLAIN_TEXT" value="278" />
           <entry key="SQL" value="4" />
           <entry key="XML" value="495" />
           <entry key="YAML" value="209" />
@@ -105,8 +152,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2530">
-              <caret line="131" selection-start-line="131" selection-end-line="131" />
+            <state relative-caret-position="309">
+              <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+              <folding>
+                <element signature="e#2294#2295#0" expanded="true" />
+                <element signature="e#2359#2360#0" expanded="true" />
+                <element signature="e#2430#2431#0" expanded="true" />
+                <element signature="e#2498#2499#0" expanded="true" />
+                <element signature="e#2580#2581#0" expanded="true" />
+                <element signature="e#2643#2644#0" expanded="true" />
+                <element signature="e#2716#2717#0" expanded="true" />
+                <element signature="e#2769#2770#0" expanded="true" />
+                <element signature="e#2839#2840#0" expanded="true" />
+                <element signature="e#2890#2891#0" expanded="true" />
+                <element signature="e#2966#2967#0" expanded="true" />
+                <element signature="e#3021#3022#0" expanded="true" />
+                <element signature="e#3409#3410#0" expanded="true" />
+                <element signature="e#3481#3482#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,13 +177,77 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="111">
+              <caret line="195" column="58" lean-forward="true" selection-start-line="195" selection-start-column="58" selection-end-line="195" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Cartype.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/CarDispatch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/CarDeployLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Car.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-44">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/ArriveNoticeOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-541">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/inventoryjs/Warehouse_check.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="81" column="28" lean-forward="true" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/inventoryjs/Stock_check.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/inventoryjs/Matter_check.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -152,27 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/SysRole.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/SysRolePermission.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/SysUserinfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/SysUserinfoRole.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/TakeGoods.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/Vocation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/Warehouse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseCheck.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/WarehousePosition.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseRegion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouserType.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/CarDeployLineMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/Warehouse_check.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/WarehouseCheckMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/inventoryjs/Material_check.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/inventoryjs/Inventory_verification.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/inventoryjs/Material_scrap.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/Stock_check.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/Mattter_check.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/detail_Warehouse_check.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/detail_Stock_check.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/detail_Matter_scrap.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/detail_Matter_check.html" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/StockCheckMapper.xml" />
@@ -194,14 +300,35 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/inventoryjs/Stock_check.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/inventoryjs/Matter_reject.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/inventoryjs/Matter_check.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/add_Warehouse_check.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/add_Stock_check.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/add_Matter_reject.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/add_Matter_check.html" />
         <option value="$PROJECT_DIR$/src/main/java/org/java/dao/WarehouseCheckMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/java/service/InventoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventoryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/inventory/add_Warehouse_check.html" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseRegion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/WarehousePosition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/Warehouse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/StockCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseAppllyOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/PrepareGoods.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/OutGoods.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/OutEquipGoods.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/Motorcade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/MatterReject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/MatterCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/InGoods.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/InEquipGoods.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/ExamineGoods.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/DeliverGoods.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/CustomerOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/CarDispatch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/CarDeployLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/java/entity/ArriveNoticeOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java" />
       </list>
     </option>
@@ -278,7 +405,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -320,6 +446,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -351,10 +495,52 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="changzihaoController" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="inventoryjs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,7 +552,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565840857860" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565853028883" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -443,6 +629,7 @@
       <workItem from="1565838430413" duration="1112000" />
       <workItem from="1565840763667" duration="105000" />
       <workItem from="1565840874828" duration="647000" />
+      <workItem from="1565847147170" duration="4214000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1565353639046</created>
@@ -535,7 +722,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565840811657</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="2019年8月15日13:33:05">
+      <created>1565847190647</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1565847190647</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -547,7 +741,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101576000" />
+    <option name="totallyTimeSpent" value="105790000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -571,7 +765,7 @@
       <window_info id="Web" order="7" sideWeight="0.50708216" side_tool="true" weight="0.22520107" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2266289" />
-      <window_info anchor="bottom" x="20" y="497" width="1492" height="282" id="Run" order="2" sideWeight="0.48927614" weight="0.2776204" />
+      <window_info anchor="bottom" x="20" y="497" width="1492" height="282" id="Run" order="2" sideWeight="0.48927614" visible="true" weight="0.23796034" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798927" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -644,77 +838,364 @@
     <MESSAGE value="2019年8月15日09:28:00" />
     <MESSAGE value="2019年8月15日09:35:00" />
     <MESSAGE value="2019年8月15日11:46:42" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019年8月15日11:46:42" />
+    <MESSAGE value="2019年8月15日13:33:05" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019年8月15日13:33:05" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CustomerMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CustomerOrderMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeliverGoodsMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DepartmentMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExamineGoodsMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WarehouserTypeMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WarehousePositionMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WarehouseMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VocationMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TakeGoodsMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SysUserinfoRoleMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SysUserinfoMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/InEquipGoodsMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/OutEquipGoodsMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MotorcadeMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/InGoodsMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/detail_Warehouse_check.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/detail_Stock_check.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/detail_Matter_scrap.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/detail_Matter_check.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WarehouseRegionMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml" />
-    <entry file="file://$PROJECT_DIR$/generatorConfig.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/TmssystemApplication.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/java/TmssystemApplicationTests.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/Matter_check.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/Matter_reject.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/Stock_check.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MatterRejectMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/dao/MatterRejectMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/dao/StockCheckMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/dao/MatterCheckMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MatterMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MatterCheckMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StockCheckMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/Warehouse_check.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/inventoryjs/Stock_check.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/inventoryjs/Matter_reject.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/inventoryjs/Matter_check.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/add_Matter_reject.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/add_Matter_check.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/inventoryjs/Warehouse_check.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/add_Warehouse_check.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/add_Stock_check.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WarehouseCheckMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/dao/WarehouseCheckMapper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/InventoryService.java" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-239" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WarehouseCheckMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2530">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        <state relative-caret-position="264">
+          <caret line="99" column="75" lean-forward="true" selection-start-line="99" selection-start-column="75" selection-end-line="99" selection-end-column="75" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/add_Stock_check.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/web/pageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inventory/add_Warehouse_check.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="113" column="31" selection-start-line="113" selection-start-column="31" selection-end-line="113" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/dao/WarehouseCheckMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/WarehouserType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseRegion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/WarehousePosition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Warehouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Vocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/TakeGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/SysUserinfoRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/SysUserinfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/SysRolePermission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/SysRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/SysPurchaseAppllyMatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/SysPermission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/SysCustomerOrderMatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Supplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/StockCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseAppllyOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Province.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/PrepareGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/OutGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/OutEquipGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Motorcade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/MatterReject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/MatterCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Matter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/InGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/InEquipGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/ExamineGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/DeliverGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/CustomerOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/City.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Cartype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/CarDispatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/CarDeployLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/ArriveNoticeOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-541">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+          <folding>
+            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2359#2360#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2498#2499#0" expanded="true" />
+            <element signature="e#2580#2581#0" expanded="true" />
+            <element signature="e#2643#2644#0" expanded="true" />
+            <element signature="e#2716#2717#0" expanded="true" />
+            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#2839#2840#0" expanded="true" />
+            <element signature="e#2890#2891#0" expanded="true" />
+            <element signature="e#2966#2967#0" expanded="true" />
+            <element signature="e#3021#3022#0" expanded="true" />
+            <element signature="e#3409#3410#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/inventoryjs/Warehouse_check.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="81" column="28" lean-forward="true" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/inventoryjs/Stock_check.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/inventoryjs/Matter_check.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="111">
+          <caret line="195" column="58" lean-forward="true" selection-start-line="195" selection-start-column="58" selection-end-line="195" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

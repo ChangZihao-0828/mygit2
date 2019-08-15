@@ -1,11 +1,14 @@
 package org.java.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class DeliverGoods  implements Serializable {
     private String deliverGoodsId;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date deliverDate;
 
     private String userId;

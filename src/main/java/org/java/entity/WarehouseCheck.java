@@ -1,5 +1,7 @@
 package org.java.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,6 +12,7 @@ public class WarehouseCheck implements Serializable {
 
     private String warehouseCheckUserId;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date warehouseCheckDate;
 
     private String warehouseCheckResult;

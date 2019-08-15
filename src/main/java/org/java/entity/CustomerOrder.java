@@ -1,5 +1,7 @@
 package org.java.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,6 +12,7 @@ public class CustomerOrder   implements Serializable {
 
     private String customerOrderDeclaration;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date customerGetgoodstime;
 
     private String customerOrderLinkman;
@@ -24,6 +27,7 @@ public class CustomerOrder   implements Serializable {
 
     private String customerOrderState;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date customerOrderTime;
 
     private String customerOrderRests;

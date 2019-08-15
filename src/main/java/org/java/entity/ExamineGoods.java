@@ -1,5 +1,7 @@
 package org.java.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,6 +14,7 @@ public class ExamineGoods   implements Serializable {
 
     private String examineGoodsPeople;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date examineGoodsTime;
 
     private String examineGoodsRemark;
