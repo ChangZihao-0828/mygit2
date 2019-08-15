@@ -3,52 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="700113a3-70c2-4a4d-be48-99d7b90702c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/ArriveNoticeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/ArriveNoticeOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/CarDeployLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/CarDeployLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/CarDispatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/CarDispatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/CustomerOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/CustomerOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/DeliverGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/DeliverGoods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/ExamineGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/ExamineGoods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/InEquipGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/InEquipGoods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/InGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/InGoods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/MatterCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/MatterCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/MatterReject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/MatterReject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/Motorcade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/Motorcade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/OutEquipGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/OutEquipGoods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/OutGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/OutGoods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/PrepareGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/PrepareGoods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseAppllyOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseAppllyOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/PurchaseOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/StockCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/StockCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehousePosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehousePosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/entity/WarehouseRegion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/inventory/add_Warehouse_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/inventory/add_Warehouse_check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/ArriveNoticeOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/ArriveNoticeOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/CarDeployLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/CarDeployLine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/CarDispatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/CarDispatch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/CustomerOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/CustomerOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/DeliverGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/DeliverGoods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/ExamineGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/ExamineGoods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/InEquipGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/InEquipGoods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/InGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/InGoods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/MatterCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/MatterCheck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/MatterReject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/MatterReject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/Motorcade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/Motorcade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/OutEquipGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/OutEquipGoods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/OutGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/OutGoods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/PrepareGoods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/PrepareGoods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/PurchaseAppllyOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/PurchaseAppllyOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/PurchaseOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/PurchaseOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/StockCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/StockCheck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/Warehouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/Warehouse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/WarehouseCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/WarehouseCheck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/WarehousePosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/WarehousePosition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/entity/WarehouseRegion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/java/entity/WarehouseRegion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory/add_Warehouse_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory/add_Warehouse_check.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,7 +30,7 @@
     <session id="-1305649387">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="11" />
           <entry key="project.open.time.12" value="2" />
@@ -98,7 +52,7 @@
           <entry key="js" value="105" />
           <entry key="php" value="1" />
           <entry key="png" value="52" />
-          <entry key="xml" value="94" />
+          <entry key="xml" value="95" />
           <entry key="yml" value="18" />
         </counts>
       </usages-collector>
@@ -110,7 +64,7 @@
           <entry key="JAVA" value="260" />
           <entry key="JavaScript" value="105" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="94" />
+          <entry key="XML" value="95" />
           <entry key="YAML" value="18" />
         </counts>
       </usages-collector>
@@ -120,7 +74,7 @@
           <entry key="html" value="3269" />
           <entry key="java" value="2551" />
           <entry key="js" value="918" />
-          <entry key="txt" value="247" />
+          <entry key="txt" value="251" />
           <entry key="xml" value="499" />
           <entry key="yml" value="209" />
         </counts>
@@ -130,7 +84,7 @@
           <entry key="HTML" value="3269" />
           <entry key="JAVA" value="2551" />
           <entry key="JavaScript" value="918" />
-          <entry key="PLAIN_TEXT" value="278" />
+          <entry key="PLAIN_TEXT" value="282" />
           <entry key="SQL" value="4" />
           <entry key="XML" value="495" />
           <entry key="YAML" value="209" />
@@ -174,7 +128,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="111">
@@ -186,11 +140,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/java/entity/Cartype.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generatorConfig.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="132">
+              <caret line="6" column="82" lean-forward="true" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -552,7 +506,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565853028883" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565855690611" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -629,7 +583,7 @@
       <workItem from="1565838430413" duration="1112000" />
       <workItem from="1565840763667" duration="105000" />
       <workItem from="1565840874828" duration="647000" />
-      <workItem from="1565847147170" duration="4214000" />
+      <workItem from="1565847147170" duration="5545000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1565353639046</created>
@@ -729,7 +683,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565847190647</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="数据">
+      <created>1565854125378</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1565854125378</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -741,7 +702,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105790000" />
+    <option name="totallyTimeSpent" value="107121000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -754,6 +715,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4921986" visible="true" weight="0.23458445" />
       <window_info id="Structure" order="1" sideWeight="0.50708216" side_tool="true" weight="0.22520107" />
@@ -765,7 +727,7 @@
       <window_info id="Web" order="7" sideWeight="0.50708216" side_tool="true" weight="0.22520107" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2266289" />
-      <window_info anchor="bottom" x="20" y="497" width="1492" height="282" id="Run" order="2" sideWeight="0.48927614" visible="true" weight="0.23796034" />
+      <window_info anchor="bottom" x="20" y="497" width="1492" height="282" id="Run" order="2" sideWeight="0.48927614" weight="0.23796034" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798927" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -839,14 +801,14 @@
     <MESSAGE value="2019年8月15日09:35:00" />
     <MESSAGE value="2019年8月15日11:46:42" />
     <MESSAGE value="2019年8月15日13:33:05" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019年8月15日13:33:05" />
+    <MESSAGE value="数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/InventoryService.java" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-239" />
@@ -1199,6 +1161,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="82" lean-forward="true" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="82" />
         </state>
       </provider>
     </entry>
