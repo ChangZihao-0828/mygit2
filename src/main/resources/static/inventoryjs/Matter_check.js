@@ -13,16 +13,16 @@ layui.use(['table','layer','jquery'], function(){
         ,title:"物料检查记录汇总" //设置导出文件时的标题
         ,loading:true
         ,cols: [[ //表头
-            {field: 'matter_check_id', title: '物料检查单编号', width:"10%", sort: true, fixed: 'left',align:"center"}
-            ,{field: 'warehouse_position_id', title: '仓位编号', width:"10%", sort: true,align:"center"}
-            ,{field: 'matter_check_user_id', title: '检查人', width:"10%",align:"center"}
-            ,{field: 'matter_check_date', title: '检查日期', width: "10%",align:"center", sort: true,templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
-            ,{field: 'matter_check_result', title: '检查结果', width: "10%",align:"center"}
-            ,{field: 'temperature_check', title: '温度检查', width:"8%",align:"center"}
-            ,{field: 'humidity_check', title: '湿度检查', width:"8%",align:"center"}
-            ,{field: 'sanitation_check', title: '卫生检查', width:"8%",align:"center"}
-            ,{field: 'metamorphic_check', title: '变质检查', width:"8%",align:"center"}
-            ,{field: 'wearout_check', title: '破损检查', width:"8%",align:"center"}
+            {field: 'matterCheckId', title: '物料检查单编号', width:"10%", sort: true, fixed: 'left',align:"center"}
+            ,{field: 'warehousePositionId', title: '仓位编号', width:"10%", sort: true,align:"center"}
+            ,{field: 'matterCheckUserId', title: '检查人', width:"10%",align:"center"}
+            ,{field: 'matterCheckDate', title: '检查日期', width: "10%",align:"center", sort: true,templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
+            ,{field: 'matterCheckResult', title: '检查结果', width: "10%",align:"center"}
+            ,{field: 'temperatureCheck', title: '温度检查', width:"8%",align:"center"}
+            ,{field: 'humidityCheck', title: '湿度检查', width:"8%",align:"center"}
+            ,{field: 'sanitationCheck', title: '卫生检查', width:"8%",align:"center"}
+            ,{field: 'metamorphicCheck', title: '变质检查', width:"8%",align:"center"}
+            ,{field: 'wearoutCheck', title: '破损检查', width:"8%",align:"center"}
             , {field: 'op', title: '操作', width: "10%", align: "center", toolbar: "#barDemo"}
         ]]
     });
@@ -81,7 +81,7 @@ layui.use(['table','layer','jquery'], function(){
 
             layer.confirm('真的删除行么', function (index) {
 
-                $.post("/del", {"id": data.id}, function () {
+                $.post("/delMatterCheckId", {"matterCheckId": data.matterCheckId}, function () {
 
                     table.reload('demo', {
                         page: {
@@ -101,7 +101,7 @@ layui.use(['table','layer','jquery'], function(){
                 maxmin: false,
                 anim: 1,
                 title: "物料检查单详情",
-                content: '/inventory/detail_Matter_check',
+                content: '/inventory/add_Matter_check',
                 zIndex: layer.zIndex, //重点1
                 success: function (layero) {
                     layer.setTop(layero); //重点2

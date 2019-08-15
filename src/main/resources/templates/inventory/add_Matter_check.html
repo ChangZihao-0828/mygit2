@@ -5,12 +5,13 @@
     <title>Title</title>
     <link rel="stylesheet" th:href="@{'/layui/css/layui.css'}" media="all">
     <script th:src="@{'/layui/layui.js'}"></script>
+    <script th:src="@{'/inventoryjs/Matter_check.js'}"></script>
 </head>
 <body>
 <br>
 <h1>&nbsp;&nbsp;&nbsp;添加物料检查</h1>
 <br/>
-<form class="layui-form" action="" method="post">
+<form class="layui-form" id="addFrm">
     <table align="center" width="100%">
         <tr >
             <td colspan="2" align="center"><h2>基础信息</h2><hr/></td><td colspan="2" align="center"><h2>检查内容</h2><hr/></td>
@@ -18,41 +19,41 @@
         <tr>
             <td align="center" width="15%">物料检查单号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="matter_check_id" lay-verify="title" autocomplete="off" placeholder="请输入物料检查单编号" class="layui-input">
+                <input type="text" name="matterCheckId" lay-verify="title" autocomplete="off" placeholder="请输入物料检查单编号" class="layui-input" required="required">
             </div><br/><br/></td>
             <td align="center" width="15%">温度检查:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="temperature_check" lay-verify="title" autocomplete="off" class="layui-input">
+                <input type="text" name="temperatureCheck" lay-verify="title" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
         </tr>
         <tr>
             <td align="center" width="15%">仓位编号：&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="warehouse_position_id" lay-verify="title" autocomplete="off" placeholder="请输入仓位编号" class="layui-input">
+                <input type="text" name="warehousePositionId" lay-verify="title" autocomplete="off" placeholder="请输入仓位编号" class="layui-input" required="required">
             </div><br/><br/></td>
             <td align="center" width="15%">湿度检查：&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="temperature_check" lay-verify="title" sautocomplete="off" class="layui-input">
+                <input type="text" name="temperatureCheck" lay-verify="title" sautocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
         </tr>
         <tr>
             <td align="center" width="15%">检查人:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="matter_check_user_id" lay-verify="title" autocomplete="off" placeholder="请输入检查人" class="layui-input">
+                <input type="text" name="matterCheckUserId" lay-verify="title" autocomplete="off" placeholder="请输入检查人" class="layui-input" required="required">
             </div><br/><br/></td>
             <td align="center" width="15%">卫生检查：&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="sanitation_check" lay-verify="title" autocomplete="off" class="layui-input">
+                <input type="text" name="sanitationCheck" lay-verify="title" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
         </tr>
         <tr>
             <td align="center" width="15%">检查日期：&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="matter_check_date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                <input type="text" name="matterCheckDate" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
             <td align="center" width="15%">变质检查：&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="metamorphic_check" lay-verify="title" autocomplete="off" class="layui-input">
+                <input type="text" name="metamorphicCheck" lay-verify="title" autocomplete="off" class="layui-input" required="required">
                 </div><br/><br/></td>
 
         </tr>
@@ -62,7 +63,7 @@
                 <br/><br/></td>
             <td width="35%">
                 <div class="layui-input-inline">
-                    <select name="matter_check_result" lay-verify="required" lay-search="">
+                    <select name="matterCheckResult" lay-verify="required" lay-search="" required="required">
                         <option value="不合格" th:required="required">不合格</option>
                         <option value="合格">合格</option>
                     </select>
@@ -70,7 +71,7 @@
             </td>
             <td align="center" width="15%">破损检查：&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="wearout_check" lay-verify="title" autocomplete="off" class="layui-input">
+                <input type="text" name="wearoutCheck" lay-verify="title" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
         </tr>
         <tr>
@@ -114,9 +115,17 @@
 
         //监听提交
         form.on('submit(demo1)', function(data){
-            layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
-            })
+            $.ajax({
+                url:"/addMatterCheck",
+                type:"post",
+                data:$("#addFrm").serialize(),
+                success:function () {
+                    //layer.msg("添加成功!!!",function(){
+                    //准备让父窗口刷新，并且关闭当前弹出的窗体
+                    window.parent.location.reload();
+                    //});
+                }
+            });
             return false;
         });
 

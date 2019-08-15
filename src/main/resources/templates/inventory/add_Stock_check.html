@@ -5,12 +5,13 @@
     <title>Title</title>
     <link rel="stylesheet" th:href="@{'/layui/css/layui.css'}" media="all">
     <script th:src="@{'/layui/layui.js'}"></script>
+    <script th:src="@{'/inventoryjs/Stock_check.js'}"></script>
 </head>
 <body>
 <br>
 <h1>&nbsp;&nbsp;&nbsp;添加库存单</h1>
 <br/>
-<form class="layui-form" action="" method="post">
+<form class="layui-form" id="addFrm">
     <table align="center" width="100%">
         <tr>
             <td colspan="4"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>基础信息</b></h4><hr/></td>
@@ -18,32 +19,32 @@
         <tr>
             <td align="center" width="15%">盘点单编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="Stock_check_id" lay-verify="title" autocomplete="off" placeholder="请输入盘点单编号" class="layui-input">
+                <input type="text" name="stockCheckId" lay-verify="title" autocomplete="off" placeholder="请输入盘点单编号" class="layui-input" required="required">
             </div><br/><br/></td>
             <td align="center" width="15%">盘点人:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="user_id" lay-verify="title" placeholder="请输入盘点人编号" autocomplete="off" class="layui-input">
+                <input type="text" name="userId" lay-verify="title" placeholder="请输入盘点人编号" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
         </tr>
 
         <tr>
             <td align="center" width="15%">盘点日期：&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="check_date" id="date" lay-verify="date" placeholder="年/月/日" autocomplete="off" class="layui-input">
+                <input type="text" name="checkDate" id="date" lay-verify="date" placeholder="年/月/日" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
             <td align="center" width="15%">仓位编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%" colspan="3"><div class="layui-input-inline">
-                <input type="text" name="warehouse_position_id" lay-verify="title" autocomplete="off" placeholder="请输入仓位编号" class="layui-input">
+                <input type="text" name="warehousePositionId" lay-verify="title" autocomplete="off" placeholder="请输入仓位编号" class="layui-input" required="required">
             </div><br/><br/></td>
         </tr>
         <tr>
             <td align="center" width="15%">仓库编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="warehouse_id" lay-verify="title" autocomplete="off" placeholder="请输入仓库编号" class="layui-input">
+                <input type="text" name="warehouseId" lay-verify="title" autocomplete="off" placeholder="请输入仓库编号" class="layui-input" required="required">
             </div><br/><br/></td>
             <td align="center" width="15%">仓库区域编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="warehouse_region_id" lay-verify="title" placeholder="请输入仓库区域编号" autocomplete="off" class="layui-input">
+                <input type="text" name="warehouseRegionId" lay-verify="title" placeholder="请输入仓库区域编号" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
         </tr>
     </table>
@@ -121,9 +122,17 @@
 
         //监听提交
         form.on('submit(demo1)', function(data){
-            layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
-            })
+            $.ajax({
+                url:"/addStockCheck",
+                type:"post",
+                data:$("#addFrm").serialize(),
+                success:function () {
+                    //layer.msg("添加成功!!!",function(){
+                    //准备让父窗口刷新，并且关闭当前弹出的窗体
+                    window.parent.location.reload();
+                    //});
+                }
+            });
             return false;
         });
 

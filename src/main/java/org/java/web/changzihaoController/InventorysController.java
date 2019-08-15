@@ -1,12 +1,13 @@
 package org.java.web.changzihaoController;
 
+import org.java.entity.MatterCheck;
+import org.java.entity.MatterReject;
+import org.java.entity.StockCheck;
 import org.java.entity.WarehouseCheck;
-import org.java.service.WarehouseCheckService;
+import org.java.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,15 +20,14 @@ import java.util.Map;
  */
 
 @Controller
-public class InventoryController {
+public class InventorysController {
 
     @Autowired
-    private WarehouseCheckService warehouseCheckService;
+    private InventoryService inventoryService;
 
     @GetMapping("/inventory/{page}")
     public String inventory(@PathVariable("page") String page){
 
-        System.out.println("---------");
         return "inventory/"+page;
     }
 
@@ -36,9 +36,9 @@ public class InventoryController {
     @ResponseBody
     public Map<String,Object> warehouseCheck(){
 
-        List<WarehouseCheck> warehouseCheck = warehouseCheckService.findWarehouseCheck();
+        List<WarehouseCheck> warehouseCheck = inventoryService.findWarehouseCheck();
 
-        Integer count = warehouseCheckService.findWarehouseCheckCount();
+        Integer count = inventoryService.findWarehouseCheckCount();
 
         Map map = new HashMap();
 
@@ -46,6 +46,8 @@ public class InventoryController {
         map.put("msg","");
         map.put("count",count);//总数
         map.put("data",warehouseCheck);
+
+        System.out.println(map);
         return map;
     }
 
@@ -53,9 +55,9 @@ public class InventoryController {
     @ResponseBody
     public Map<String,Object> matterCheck(){
 
-        List<WarehouseCheck> warehouseCheck = warehouseCheckService.findWarehouseCheck();
+        List<MatterCheck> warehouseCheck = inventoryService.findMatterCheck();
 
-        Integer count = warehouseCheckService.findWarehouseCheckCount();
+        Integer count = inventoryService.findMatterCheckCount();
 
         Map map = new HashMap();
 
@@ -63,15 +65,16 @@ public class InventoryController {
         map.put("msg","");
         map.put("count",count);//总数
         map.put("data",warehouseCheck);
+        System.out.println(map);
         return map;
     }
-    @GetMapping("matterScrap")
+    @GetMapping("matterReject")
     @ResponseBody
     public Map<String,Object> matterScrap(){
 
-        List<WarehouseCheck> warehouseCheck = warehouseCheckService.findWarehouseCheck();
+        List<MatterReject> warehouseCheck = inventoryService.findMatterReject();
 
-        Integer count = warehouseCheckService.findWarehouseCheckCount();
+        Integer count = inventoryService.findMatterRejectCount();
 
         Map map = new HashMap();
 
@@ -79,15 +82,16 @@ public class InventoryController {
         map.put("msg","");
         map.put("count",count);//总数
         map.put("data",warehouseCheck);
+        System.out.println(map);
         return map;
     }
     @GetMapping("stockCheck")
     @ResponseBody
     public Map<String,Object> stockCheck(){
 
-        List<WarehouseCheck> warehouseCheck = warehouseCheckService.findWarehouseCheck();
+        List<StockCheck> warehouseCheck = inventoryService.findStockCheck();
 
-        Integer count = warehouseCheckService.findWarehouseCheckCount();
+        Integer count = inventoryService.findStockCheckCount();
 
         Map map = new HashMap();
 
@@ -95,7 +99,44 @@ public class InventoryController {
         map.put("msg","");
         map.put("count",count);//总数
         map.put("data",warehouseCheck);
+        System.out.println(map);
         return map;
     }
+
+    @RequestMapping("delWarehouseCheck")
+    @ResponseBody
+    public void delWarehouseCheck(String warehouseCheckId){
+
+        System.out.println(warehouseCheckId);
+
+    }
+
+    @RequestMapping("delMatterCheck")
+    @ResponseBody
+    public void delMatterCheck(String MatterCheckId){
+
+        System.out.println(MatterCheckId);
+
+    }
+
+    @RequestMapping("delStockCheck")
+    @ResponseBody
+    public void delStockCheck(String StockCheckId){
+
+        System.out.println(StockCheckId);
+
+    }
+
+    @RequestMapping("delMatterReject")
+    @ResponseBody
+    public void delMatterReject(String MatterRejectId){
+
+        System.out.println(MatterRejectId);
+
+    }
+
+
+
+
 
 }

@@ -2,6 +2,9 @@ package org.java.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.java.entity.StockCheck;
+
+import java.util.List;
+
 @Mapper
 public interface StockCheckMapper {
     int deleteByPrimaryKey(String stockCheckId);
@@ -15,4 +18,8 @@ public interface StockCheckMapper {
     int updateByPrimaryKeySelective(StockCheck record);
 
     int updateByPrimaryKey(StockCheck record);
+
+    List<StockCheck> findStockCheck();
+
+    Integer findStockCheckCount();
 }

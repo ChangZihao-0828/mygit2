@@ -5,12 +5,13 @@
     <title>Title</title>
     <link rel="stylesheet" th:href="@{'/layui/css/layui.css'}" media="all">
     <script th:src="@{'/layui/layui.js'}"></script>
+    <script th:src="@{'/inventoryjs/Matter_reject.js'}"></script>
 </head>
 <body>
 <br/>
 <h1>&nbsp;&nbsp;&nbsp;添加物料报废单</h1>
 <br/>
-<form class="layui-form" action="" method="post">
+<form class="layui-form" id="addFrm">
     <table align="center" width="100%">
         <tr>
             <td colspan="4"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>基础信息</b></h4><hr/></td>
@@ -18,31 +19,31 @@
         <tr>
             <td align="center" width="15%">物料报废单编号:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入物料报废单编号" class="layui-input">
+                <input type="text" name="matterRejectId" lay-verify="title" autocomplete="off" placeholder="请输入物料报废单编号" class="layui-input" required="required">
             </div><br/><br/></td>
             <td align="center" width="15%">报废人:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" placeholder="请输入报废人编号" autocomplete="off" class="layui-input">
+                <input type="text" name="matterUserId" lay-verify="title" placeholder="请输入报废人编号" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
         </tr>
         <tr>
             <td align="center" width="15%">报废物料:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入报废物料编号" class="layui-input">
+                <input type="text" name="matterUserCount" lay-verify="title" autocomplete="off" placeholder="请输入报废物料编号" class="layui-input" required="required">
             </div><br/><br/></td>
             <td align="center" width="15%">报废数量:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" placeholder="请输入报废" autocomplete="off" class="layui-input">
+                <input type="text" name="matterUserCount" lay-verify="title" placeholder="请输入报废" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
         </tr>
         <tr>
             <td align="center" width="15%">报废日期：&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="date" id="date" lay-verify="date" placeholder="年/月/日" autocomplete="off" class="layui-input">
+                <input type="text" name="matterRejectDate" id="date" lay-verify="date" placeholder="年/月/日" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
             <<td align="center" width="15%">报废原因:&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="35%"><div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" placeholder="请输入原因" autocomplete="off" class="layui-input">
+                <input type="text" name="matterRejectReason" lay-verify="title" placeholder="请输入原因" autocomplete="off" class="layui-input" required="required">
             </div><br/><br/></td>
         </tr>
     </table>
@@ -117,9 +118,17 @@
 
         //监听提交
         form.on('submit(demo1)', function(data){
-            layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
-            })
+            $.ajax({
+                url:"/addMatterReject",
+                type:"post",
+                data:$("#addFrm").serialize(),
+                success:function () {
+                    //layer.msg("添加成功!!!",function(){
+                    //准备让父窗口刷新，并且关闭当前弹出的窗体
+                    window.parent.location.reload();
+                    //});
+                }
+            });
             return false;
         });
 

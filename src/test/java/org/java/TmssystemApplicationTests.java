@@ -11,6 +11,13 @@ public class TmssystemApplicationTests {
 
     @Test
     public void contextLoads() {
+
+        System.out.println("hello");
+    }
+
+    @Test
+    public static void main(String[] args) {
+        System.out.println("hello");
     }
 
 }

@@ -5,7 +5,7 @@ layui.use(['table','layer','jquery'], function(){
     //第一个实例
     table.render({
         elem: '#demo'
-        ,url: '/matterScrap' //数据接口
+        ,url: '/matterReject' //数据接口
         ,page: true //开启分页
         ,limit:5 //默认每一页显示的条数
         ,limits:[1,2,3,5,10,20,30,50]//提示的每页条数的列表
@@ -13,12 +13,12 @@ layui.use(['table','layer','jquery'], function(){
         ,title:"物料报废记录汇总" //设置导出文件时的标题
         ,loading:true
         ,cols: [[ //表头
-            {field: 'matter_reject_id', title: '物料报废记录编号', width:"20%", sort: true, fixed: 'left',align:"center"}
-            ,{field: 'matter _id', title: '报废的物料', width:"16%",align:"center"}
-            ,{field: 'matter_user_count', title: '报废的数量', width:"16%", sort: true,align:"center"}
-            ,{field: 'matter_user_id', title: '报废人', width:"12%",align:"center"}
-            ,{field: 'matter_reject_date', title: '报废日期', width: "13%",align:"center", sort: true,templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
-            ,{field: 'matter_reject_reason', title: '报废原因', width: "13%",align:"center"}
+            {field: 'matterRejectId', title: '物料报废记录编号', width:"20%", sort: true, fixed: 'left',align:"center"}
+            ,{field: 'matterId', title: '报废的物料', width:"16%",align:"center"}
+            ,{field: 'matterUserCount', title: '报废的数量', width:"16%", sort: true,align:"center"}
+            ,{field: 'matterUserId', title: '报废人', width:"12%",align:"center"}
+            ,{field: 'matterRejectDate', title: '报废日期', width: "13%",align:"center", sort: true,templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
+            ,{field: 'matterRejectReason', title: '报废原因', width: "13%",align:"center"}
             , {field: 'op', title: '操作', width: "10%", align: "center", toolbar: "#barDemo"}
         ]]
     });
@@ -77,7 +77,7 @@ layui.use(['table','layer','jquery'], function(){
 
             layer.confirm('真的删除行么', function (index) {
 
-                $.post("/del", {"id": data.id}, function () {
+                $.post("/delMatterRejectId", {"matterRejectId": data.matterRejectId}, function () {
 
                     table.reload('demo', {
                         page: {
@@ -97,7 +97,7 @@ layui.use(['table','layer','jquery'], function(){
                 maxmin: false,
                 anim: 1,
                 title: "物料报废单详情",
-                content: '/inventory/detail_Matter_scrap',
+                content: '/inventory/add_Matter_scrap',
                 zIndex: layer.zIndex, //重点1
                 success: function (layero) {
                     layer.setTop(layero); //重点2

@@ -79,7 +79,7 @@ layui.use(['table','layer','jquery'], function(){
 
             layer.confirm('真的删除行么', function (index) {
 
-                $.post("/del", {"id": data}, function () {
+                $.post("/delWarehouseCheck", {"warehouseCheckId": data.warehouseCheckId}, function () {
 
                     table.reload('demo', {
                         page: {
@@ -99,7 +99,7 @@ layui.use(['table','layer','jquery'], function(){
                 maxmin: false,
                 anim: 1,
                 title: "仓库检查单详情",
-                content: '/inventory/detail_Warehouse_check',
+                content: '/inventory/add_Warehouse_check',
                 zIndex: layer.zIndex, //重点1
                 success: function (layero) {
                     layer.setTop(layero); //重点2
@@ -108,12 +108,14 @@ layui.use(['table','layer','jquery'], function(){
                     var body = layui.layer.getChildFrame("body");
 
                     //给弹出层body中的表单控件赋值
-                    body.find("[name='id']").val(data.id);
-                    body.find("[name='name']").val(data.name);
-                    body.find("[name='clazz']").val(data.clazz);
-                    body.find("[name='score']").val(data.score);
-                    body.find("[value='" + data.gender + "']").attr("checked", true);//选中指定性别的单选按钮
-                    body.find("[name='bir']").val(format(data.bir, 'yyyy-MM-dd'));
+                    body.find("[name='warehouseCheckId']").val(data.warehouseCheckId);
+                    body.find("[name='warehouseId']").val(data.warehouseId);
+                    body.find("[name='warehouseCheckUserId']").val(data.warehouseCheckUserId);
+                    body.find("[name='warehouseCheckResult']").val(data.warehouseCheckResult);
+                    body.find("[name='temperatureCheck']").val(data.temperatureCheck);
+                    body.find("[name='humidityCheck']").val(data.humidityCheck);
+                    body.find("[name='sanitationCheck']").val(data.sanitationCheck);
+                    body.find("[name='warehouseCheckDate']").val(format(data.warehouseCheckDate, 'yyyy-MM-dd'));
                 }
             });
         }

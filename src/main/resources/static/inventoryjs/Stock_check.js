@@ -13,14 +13,14 @@ layui.use(['table','layer','jquery'], function(){
         ,title:"库存盘点记录汇总" //设置导出文件时的标题
         ,loading:true
         ,cols: [[ //表头
-            {field: 'stock_check_id', title: '库存盘点记录编号', width:"10%", sort: true, fixed: 'left',align:"center"}
-            ,{field: 'user_id', title: '盘点人', width:"15%",align:"center"}
-            ,{field: 'check_date', title: '盘点日期', width:"12.5%", sort: true,align:"center",templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
-            ,{field: 'matter _id', title: '物料编号', width:"12.5%",align:"center", sort: true}
-            ,{field: 'matter _id', title: '数量', width:"10%",align:"center", sort: true}
-            ,{field: 'warehouse _id', title: '仓库编号', width:"10%",align:"center", sort: true}
-            ,{field: 'warehouse_position _id', title: '仓库区域编号', width: "10%",align:"center", sort: true}
-            ,{field: 'warehouse_ region _id', title: '仓位编号', width: "10%",align:"center", sort: true}
+            {field: 'stockCheckId', title: '库存盘点记录编号', width:"10%", sort: true, fixed: 'left',align:"center"}
+            ,{field: 'userId', title: '盘点人', width:"15%",align:"center"}
+            ,{field: 'checkDate', title: '盘点日期', width:"12.5%", sort: true,align:"center",templet:'<div>{{ layui.util.toDateString(d.bir, "yyyy-MM-dd") }}</div>'}
+            ,{field: 'matterId', title: '物料编号', width:"12.5%",align:"center", sort: true}
+            ,{field: 'matterId', title: '数量', width:"10%",align:"center", sort: true}
+            ,{field: 'warehouseId', title: '仓库编号', width:"10%",align:"center", sort: true}
+            ,{field: 'warehousePositionId', title: '仓库区域编号', width: "10%",align:"center", sort: true}
+            ,{field: 'warehouseRegionId', title: '仓位编号', width: "10%",align:"center", sort: true}
             , {field: 'op', title: '操作', width: "10%", align: "center", toolbar: "#barDemo"}
         ]]
     });
@@ -79,7 +79,7 @@ layui.use(['table','layer','jquery'], function(){
 
             layer.confirm('真的删除行么', function (index) {
 
-                $.post("/del", {"id": data.id}, function () {
+                $.post("/delStockCheckId", {"stockCheckId": data.stockCheckId}, function () {
 
                     table.reload('demo', {
                         page: {
@@ -99,7 +99,7 @@ layui.use(['table','layer','jquery'], function(){
                 maxmin: false,
                 anim: 1,
                 title: "库存检查单详情",
-                content: '/inventory/detail_Stock_check',
+                content: '/inventory/add_Stock_check',
                 zIndex: layer.zIndex, //重点1
                 success: function (layero) {
                     layer.setTop(layero); //重点2
