@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.VocationMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.Vocation">
+    <id column="vocation_id" jdbcType="INTEGER" property="vocationId" />
+    <result column="vocation_name" jdbcType="VARCHAR" property="vocationName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    vocation_id, vocation_name
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from vocation
+    where vocation_id = #{vocationId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from vocation
+    where vocation_id = #{vocationId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.Vocation">
+    insert into vocation (vocation_id, vocation_name)
+    values (#{vocationId,jdbcType=INTEGER}, #{vocationName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.Vocation">
+    insert into vocation
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="vocationId != null">
+        vocation_id,
+      </if>
+      <if test="vocationName != null">
+        vocation_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="vocationId != null">
+        #{vocationId,jdbcType=INTEGER},
+      </if>
+      <if test="vocationName != null">
+        #{vocationName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.Vocation">
+    update vocation
+    <set>
+      <if test="vocationName != null">
+        vocation_name = #{vocationName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where vocation_id = #{vocationId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.Vocation">
+    update vocation
+    set vocation_name = #{vocationName,jdbcType=VARCHAR}
+    where vocation_id = #{vocationId,jdbcType=INTEGER}
+  </update>
+</mapper>

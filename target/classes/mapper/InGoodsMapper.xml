@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.InGoodsMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.InGoods">
+    <id column="in_goods_id" jdbcType="VARCHAR" property="inGoodsId" />
+    <result column="in_goods_inTime" jdbcType="DATE" property="inGoodsIntime" />
+    <result column="warehouse_id" jdbcType="VARCHAR" property="warehouseId" />
+    <result column="prepare_goods_id" jdbcType="VARCHAR" property="prepareGoodsId" />
+    <result column="processinstance_id" jdbcType="VARCHAR" property="processinstanceId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    in_goods_id, in_goods_inTime, warehouse_id, prepare_goods_id, processinstance_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from in_goods
+    where in_goods_id = #{inGoodsId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from in_goods
+    where in_goods_id = #{inGoodsId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.InGoods">
+    insert into in_goods (in_goods_id, in_goods_inTime, warehouse_id, 
+      prepare_goods_id, processinstance_id)
+    values (#{inGoodsId,jdbcType=VARCHAR}, #{inGoodsIntime,jdbcType=DATE}, #{warehouseId,jdbcType=VARCHAR}, 
+      #{prepareGoodsId,jdbcType=VARCHAR}, #{processinstanceId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.InGoods">
+    insert into in_goods
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="inGoodsId != null">
+        in_goods_id,
+      </if>
+      <if test="inGoodsIntime != null">
+        in_goods_inTime,
+      </if>
+      <if test="warehouseId != null">
+        warehouse_id,
+      </if>
+      <if test="prepareGoodsId != null">
+        prepare_goods_id,
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="inGoodsId != null">
+        #{inGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="inGoodsIntime != null">
+        #{inGoodsIntime,jdbcType=DATE},
+      </if>
+      <if test="warehouseId != null">
+        #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="prepareGoodsId != null">
+        #{prepareGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.InGoods">
+    update in_goods
+    <set>
+      <if test="inGoodsIntime != null">
+        in_goods_inTime = #{inGoodsIntime,jdbcType=DATE},
+      </if>
+      <if test="warehouseId != null">
+        warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="prepareGoodsId != null">
+        prepare_goods_id = #{prepareGoodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="processinstanceId != null">
+        processinstance_id = #{processinstanceId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where in_goods_id = #{inGoodsId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.InGoods">
+    update in_goods
+    set in_goods_inTime = #{inGoodsIntime,jdbcType=DATE},
+      warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      prepare_goods_id = #{prepareGoodsId,jdbcType=VARCHAR},
+      processinstance_id = #{processinstanceId,jdbcType=VARCHAR}
+    where in_goods_id = #{inGoodsId,jdbcType=VARCHAR}
+  </update>
+</mapper>

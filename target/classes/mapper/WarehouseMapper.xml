@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.WarehouseMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.Warehouse">
+    <id column="warehouse_id" jdbcType="VARCHAR" property="warehouseId" />
+    <result column="warehouse_name" jdbcType="VARCHAR" property="warehouseName" />
+    <result column="Warehouse_area" jdbcType="INTEGER" property="warehouseArea" />
+    <result column="Warehouse_type" jdbcType="INTEGER" property="warehouseType" />
+    <result column="Warehouse_address" jdbcType="VARCHAR" property="warehouseAddress" />
+    <result column="Warehouse_enable" jdbcType="VARCHAR" property="warehouseEnable" />
+    <result column="Warehouse_build_date" jdbcType="DATE" property="warehouseBuildDate" />
+    <result column="Warehouse_manager" jdbcType="VARCHAR" property="warehouseManager" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    warehouse_id, warehouse_name, Warehouse_area, Warehouse_type, Warehouse_address, 
+    Warehouse_enable, Warehouse_build_date, Warehouse_manager
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from warehouse
+    where warehouse_id = #{warehouseId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from warehouse
+    where warehouse_id = #{warehouseId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.Warehouse">
+    insert into warehouse (warehouse_id, warehouse_name, Warehouse_area, 
+      Warehouse_type, Warehouse_address, Warehouse_enable, 
+      Warehouse_build_date, Warehouse_manager)
+    values (#{warehouseId,jdbcType=VARCHAR}, #{warehouseName,jdbcType=VARCHAR}, #{warehouseArea,jdbcType=INTEGER}, 
+      #{warehouseType,jdbcType=INTEGER}, #{warehouseAddress,jdbcType=VARCHAR}, #{warehouseEnable,jdbcType=VARCHAR}, 
+      #{warehouseBuildDate,jdbcType=DATE}, #{warehouseManager,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.Warehouse">
+    insert into warehouse
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="warehouseId != null">
+        warehouse_id,
+      </if>
+      <if test="warehouseName != null">
+        warehouse_name,
+      </if>
+      <if test="warehouseArea != null">
+        Warehouse_area,
+      </if>
+      <if test="warehouseType != null">
+        Warehouse_type,
+      </if>
+      <if test="warehouseAddress != null">
+        Warehouse_address,
+      </if>
+      <if test="warehouseEnable != null">
+        Warehouse_enable,
+      </if>
+      <if test="warehouseBuildDate != null">
+        Warehouse_build_date,
+      </if>
+      <if test="warehouseManager != null">
+        Warehouse_manager,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="warehouseId != null">
+        #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseName != null">
+        #{warehouseName,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseArea != null">
+        #{warehouseArea,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseType != null">
+        #{warehouseType,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseAddress != null">
+        #{warehouseAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseEnable != null">
+        #{warehouseEnable,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseBuildDate != null">
+        #{warehouseBuildDate,jdbcType=DATE},
+      </if>
+      <if test="warehouseManager != null">
+        #{warehouseManager,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.Warehouse">
+    update warehouse
+    <set>
+      <if test="warehouseName != null">
+        warehouse_name = #{warehouseName,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseArea != null">
+        Warehouse_area = #{warehouseArea,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseType != null">
+        Warehouse_type = #{warehouseType,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseAddress != null">
+        Warehouse_address = #{warehouseAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseEnable != null">
+        Warehouse_enable = #{warehouseEnable,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseBuildDate != null">
+        Warehouse_build_date = #{warehouseBuildDate,jdbcType=DATE},
+      </if>
+      <if test="warehouseManager != null">
+        Warehouse_manager = #{warehouseManager,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where warehouse_id = #{warehouseId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.Warehouse">
+    update warehouse
+    set warehouse_name = #{warehouseName,jdbcType=VARCHAR},
+      Warehouse_area = #{warehouseArea,jdbcType=INTEGER},
+      Warehouse_type = #{warehouseType,jdbcType=INTEGER},
+      Warehouse_address = #{warehouseAddress,jdbcType=VARCHAR},
+      Warehouse_enable = #{warehouseEnable,jdbcType=VARCHAR},
+      Warehouse_build_date = #{warehouseBuildDate,jdbcType=DATE},
+      Warehouse_manager = #{warehouseManager,jdbcType=VARCHAR}
+    where warehouse_id = #{warehouseId,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.WarehouseCheckMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.WarehouseCheck">
+    <id column="warehouse_check_id" jdbcType="VARCHAR" property="warehouseCheckId" />
+    <result column="warehouse_id" jdbcType="VARCHAR" property="warehouseId" />
+    <result column="warehouse_check_user_id" jdbcType="VARCHAR" property="warehouseCheckUserId" />
+    <result column="warehouse_check_date" jdbcType="DATE" property="warehouseCheckDate" />
+    <result column="warehouse_check_result" jdbcType="VARCHAR" property="warehouseCheckResult" />
+    <result column="temperature_check" jdbcType="VARCHAR" property="temperatureCheck" />
+    <result column="humidity_check" jdbcType="VARCHAR" property="humidityCheck" />
+    <result column="sanitation_check" jdbcType="VARCHAR" property="sanitationCheck" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    warehouse_check_id, warehouse_id, warehouse_check_user_id, warehouse_check_date, 
+    warehouse_check_result, temperature_check, humidity_check, sanitation_check
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from warehouse_check
+    where warehouse_check_id = #{warehouseCheckId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from warehouse_check
+    where warehouse_check_id = #{warehouseCheckId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.WarehouseCheck">
+    insert into warehouse_check (warehouse_check_id, warehouse_id, warehouse_check_user_id, 
+      warehouse_check_date, warehouse_check_result, 
+      temperature_check, humidity_check, sanitation_check
+      )
+    values (#{warehouseCheckId,jdbcType=VARCHAR}, #{warehouseId,jdbcType=VARCHAR}, #{warehouseCheckUserId,jdbcType=VARCHAR}, 
+      #{warehouseCheckDate,jdbcType=DATE}, #{warehouseCheckResult,jdbcType=VARCHAR}, 
+      #{temperatureCheck,jdbcType=VARCHAR}, #{humidityCheck,jdbcType=VARCHAR}, #{sanitationCheck,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.WarehouseCheck">
+    insert into warehouse_check
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="warehouseCheckId != null">
+        warehouse_check_id,
+      </if>
+      <if test="warehouseId != null">
+        warehouse_id,
+      </if>
+      <if test="warehouseCheckUserId != null">
+        warehouse_check_user_id,
+      </if>
+      <if test="warehouseCheckDate != null">
+        warehouse_check_date,
+      </if>
+      <if test="warehouseCheckResult != null">
+        warehouse_check_result,
+      </if>
+      <if test="temperatureCheck != null">
+        temperature_check,
+      </if>
+      <if test="humidityCheck != null">
+        humidity_check,
+      </if>
+      <if test="sanitationCheck != null">
+        sanitation_check,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="warehouseCheckId != null">
+        #{warehouseCheckId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseId != null">
+        #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseCheckUserId != null">
+        #{warehouseCheckUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseCheckDate != null">
+        #{warehouseCheckDate,jdbcType=DATE},
+      </if>
+      <if test="warehouseCheckResult != null">
+        #{warehouseCheckResult,jdbcType=VARCHAR},
+      </if>
+      <if test="temperatureCheck != null">
+        #{temperatureCheck,jdbcType=VARCHAR},
+      </if>
+      <if test="humidityCheck != null">
+        #{humidityCheck,jdbcType=VARCHAR},
+      </if>
+      <if test="sanitationCheck != null">
+        #{sanitationCheck,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.WarehouseCheck">
+    update warehouse_check
+    <set>
+      <if test="warehouseId != null">
+        warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseCheckUserId != null">
+        warehouse_check_user_id = #{warehouseCheckUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseCheckDate != null">
+        warehouse_check_date = #{warehouseCheckDate,jdbcType=DATE},
+      </if>
+      <if test="warehouseCheckResult != null">
+        warehouse_check_result = #{warehouseCheckResult,jdbcType=VARCHAR},
+      </if>
+      <if test="temperatureCheck != null">
+        temperature_check = #{temperatureCheck,jdbcType=VARCHAR},
+      </if>
+      <if test="humidityCheck != null">
+        humidity_check = #{humidityCheck,jdbcType=VARCHAR},
+      </if>
+      <if test="sanitationCheck != null">
+        sanitation_check = #{sanitationCheck,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where warehouse_check_id = #{warehouseCheckId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.WarehouseCheck">
+    update warehouse_check
+    set warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      warehouse_check_user_id = #{warehouseCheckUserId,jdbcType=VARCHAR},
+      warehouse_check_date = #{warehouseCheckDate,jdbcType=DATE},
+      warehouse_check_result = #{warehouseCheckResult,jdbcType=VARCHAR},
+      temperature_check = #{temperatureCheck,jdbcType=VARCHAR},
+      humidity_check = #{humidityCheck,jdbcType=VARCHAR},
+      sanitation_check = #{sanitationCheck,jdbcType=VARCHAR}
+    where warehouse_check_id = #{warehouseCheckId,jdbcType=VARCHAR}
+  </update>
+  <select id="findWarehouseCheck" resultMap="BaseResultMap">
+    select * from warehouse_check
+  </select>
+  <select id="findWarehouseCheckCount" resultType="java.lang.Integer">
+    select count(*) from warehouse_check
+  </select>
+</mapper>

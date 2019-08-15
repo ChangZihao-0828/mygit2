@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.java.dao.WarehouseRegionMapper">
+  <resultMap id="BaseResultMap" type="org.java.entity.WarehouseRegion">
+    <id column="Warehouse_region_id" jdbcType="VARCHAR" property="warehouseRegionId" />
+    <result column="Warehouse_region_name" jdbcType="VARCHAR" property="warehouseRegionName" />
+    <result column="Warehouse_region_area" jdbcType="INTEGER" property="warehouseRegionArea" />
+    <result column="warehouse_id" jdbcType="VARCHAR" property="warehouseId" />
+    <result column="Warehouse_region_build_date" jdbcType="DATE" property="warehouseRegionBuildDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    Warehouse_region_id, Warehouse_region_name, Warehouse_region_area, warehouse_id, 
+    Warehouse_region_build_date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from warehouse_region
+    where Warehouse_region_id = #{warehouseRegionId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from warehouse_region
+    where Warehouse_region_id = #{warehouseRegionId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.java.entity.WarehouseRegion">
+    insert into warehouse_region (Warehouse_region_id, Warehouse_region_name, 
+      Warehouse_region_area, warehouse_id, Warehouse_region_build_date
+      )
+    values (#{warehouseRegionId,jdbcType=VARCHAR}, #{warehouseRegionName,jdbcType=VARCHAR}, 
+      #{warehouseRegionArea,jdbcType=INTEGER}, #{warehouseId,jdbcType=VARCHAR}, #{warehouseRegionBuildDate,jdbcType=DATE}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.java.entity.WarehouseRegion">
+    insert into warehouse_region
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="warehouseRegionId != null">
+        Warehouse_region_id,
+      </if>
+      <if test="warehouseRegionName != null">
+        Warehouse_region_name,
+      </if>
+      <if test="warehouseRegionArea != null">
+        Warehouse_region_area,
+      </if>
+      <if test="warehouseId != null">
+        warehouse_id,
+      </if>
+      <if test="warehouseRegionBuildDate != null">
+        Warehouse_region_build_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="warehouseRegionId != null">
+        #{warehouseRegionId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseRegionName != null">
+        #{warehouseRegionName,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseRegionArea != null">
+        #{warehouseRegionArea,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseId != null">
+        #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseRegionBuildDate != null">
+        #{warehouseRegionBuildDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.java.entity.WarehouseRegion">
+    update warehouse_region
+    <set>
+      <if test="warehouseRegionName != null">
+        Warehouse_region_name = #{warehouseRegionName,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseRegionArea != null">
+        Warehouse_region_area = #{warehouseRegionArea,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseId != null">
+        warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseRegionBuildDate != null">
+        Warehouse_region_build_date = #{warehouseRegionBuildDate,jdbcType=DATE},
+      </if>
+    </set>
+    where Warehouse_region_id = #{warehouseRegionId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.java.entity.WarehouseRegion">
+    update warehouse_region
+    set Warehouse_region_name = #{warehouseRegionName,jdbcType=VARCHAR},
+      Warehouse_region_area = #{warehouseRegionArea,jdbcType=INTEGER},
+      warehouse_id = #{warehouseId,jdbcType=VARCHAR},
+      Warehouse_region_build_date = #{warehouseRegionBuildDate,jdbcType=DATE}
+    where Warehouse_region_id = #{warehouseRegionId,jdbcType=VARCHAR}
+  </update>
+</mapper>
