@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="700113a3-70c2-4a4d-be48-99d7b90702c3" name="Default Changelist" comment="" />
+    <list default="true" id="700113a3-70c2-4a4d-be48-99d7b90702c3" name="Default Changelist" comment="2019年8月15日11:44:00">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/service/WarehouseCheckService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/service/impl/WarehouseCheckServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/java/web/changzihaoController/InventoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/inventoryjs/Matter_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/inventoryjs/Matter_check.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/inventoryjs/Matter_reject.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/inventoryjs/Matter_reject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/inventoryjs/Stock_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/inventoryjs/Stock_check.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/inventoryjs/Warehouse_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/inventoryjs/Warehouse_check.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory/add_Matter_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory/add_Matter_check.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory/add_Matter_reject.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory/add_Matter_reject.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory/add_Stock_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory/add_Stock_check.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory/add_Warehouse_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory/add_Warehouse_check.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,28 +42,28 @@
     <session id="-1305649387">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.1" value="10" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
           <entry key="html" value="146" />
-          <entry key="java" value="215" />
+          <entry key="java" value="217" />
           <entry key="jpg" value="1" />
           <entry key="js" value="100" />
           <entry key="php" value="1" />
           <entry key="png" value="52" />
-          <entry key="xml" value="92" />
+          <entry key="xml" value="93" />
           <entry key="yml" value="18" />
         </counts>
       </usages-collector>
@@ -58,10 +72,10 @@
           <entry key="CSS" value="3" />
           <entry key="HTML" value="146" />
           <entry key="Image" value="53" />
-          <entry key="JAVA" value="215" />
+          <entry key="JAVA" value="217" />
           <entry key="JavaScript" value="100" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="92" />
+          <entry key="XML" value="93" />
           <entry key="YAML" value="18" />
         </counts>
       </usages-collector>
@@ -69,9 +83,9 @@
         <counts>
           <entry key="dummy" value="31" />
           <entry key="html" value="3194" />
-          <entry key="java" value="1847" />
+          <entry key="java" value="1849" />
           <entry key="js" value="918" />
-          <entry key="txt" value="183" />
+          <entry key="txt" value="203" />
           <entry key="xml" value="499" />
           <entry key="yml" value="209" />
         </counts>
@@ -79,9 +93,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="3194" />
-          <entry key="JAVA" value="1847" />
+          <entry key="JAVA" value="1849" />
           <entry key="JavaScript" value="918" />
-          <entry key="PLAIN_TEXT" value="214" />
+          <entry key="PLAIN_TEXT" value="234" />
           <entry key="SQL" value="4" />
           <entry key="XML" value="495" />
           <entry key="YAML" value="209" />
@@ -99,7 +113,29 @@
     <favorites_list name="tmssystem" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="929">
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -278,13 +314,59 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmssystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmssystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="changzihaoController" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +378,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565836215266" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565840629593" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -331,6 +413,15 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="TmssystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tmssystem" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.java.TmssystemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\ChangZihao\AppData\Roaming\Subversion</configuration>
   </component>
@@ -360,7 +451,8 @@
       <workItem from="1565788399005" duration="130000" />
       <workItem from="1565788554948" duration="4609000" />
       <workItem from="1565828721805" duration="6284000" />
-      <workItem from="1565835790904" duration="350000" />
+      <workItem from="1565835790904" duration="1235000" />
+      <workItem from="1565838430413" duration="1112000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1565353639046</created>
@@ -458,7 +550,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98827000" />
+    <option name="totallyTimeSpent" value="100824000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -472,7 +564,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4921986" visible="true" weight="0.22520107" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4921986" visible="true" weight="0.22788204" />
       <window_info id="Structure" order="1" sideWeight="0.50708216" side_tool="true" weight="0.22520107" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -482,7 +574,7 @@
       <window_info id="Web" order="7" sideWeight="0.50708216" side_tool="true" weight="0.22520107" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2266289" />
-      <window_info anchor="bottom" x="20" y="497" width="1492" height="282" id="Run" order="2" sideWeight="0.48927614" weight="0.17988668" />
+      <window_info anchor="bottom" x="20" y="497" width="1492" height="282" id="Run" order="2" sideWeight="0.48927614" weight="0.2776204" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798927" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -496,11 +588,11 @@
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49932975" weight="0.24787535" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Maven Projects" order="2" weight="0.3297587" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="BPMNPalette" order="6" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="BPMNPalette" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
       <window_info anchor="right" id="Database" order="7" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -561,7 +653,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CityMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CustomerMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CustomerOrderMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeliverGoodsMapper.xml" />
@@ -610,8 +701,28 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WarehouseCheckMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/java/dao/WarehouseCheckMapper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/InventoryService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-239" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="929">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

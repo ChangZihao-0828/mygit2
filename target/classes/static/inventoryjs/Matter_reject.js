@@ -77,7 +77,7 @@ layui.use(['table','layer','jquery'], function(){
 
             layer.confirm('真的删除行么', function (index) {
 
-                $.post("/del", {"id": data.id}, function () {
+                $.post("/delMatterRejectId", {"matterRejectId": data.matterRejectId}, function () {
 
                     table.reload('demo', {
                         page: {

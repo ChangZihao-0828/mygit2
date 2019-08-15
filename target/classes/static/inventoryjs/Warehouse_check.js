@@ -79,7 +79,7 @@ layui.use(['table','layer','jquery'], function(){
 
             layer.confirm('真的删除行么', function (index) {
 
-                $.post("/delWarehouseCheck", {"id": data.warehouseCheckId}, function () {
+                $.post("/delWarehouseCheck", {"warehouseCheckId": data.warehouseCheckId}, function () {
 
                     table.reload('demo', {
                         page: {

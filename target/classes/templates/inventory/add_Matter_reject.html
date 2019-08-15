@@ -11,7 +11,7 @@
 <br/>
 <h1>&nbsp;&nbsp;&nbsp;添加物料报废单</h1>
 <br/>
-<form class="layui-form" action="" method="post">
+<form class="layui-form" id="addFrm">
     <table align="center" width="100%">
         <tr>
             <td colspan="4"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>基础信息</b></h4><hr/></td>
@@ -118,9 +118,17 @@
 
         //监听提交
         form.on('submit(demo1)', function(data){
-            layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
-            })
+            $.ajax({
+                url:"/addMatterReject",
+                type:"post",
+                data:$("#addFrm").serialize(),
+                success:function () {
+                    //layer.msg("添加成功!!!",function(){
+                    //准备让父窗口刷新，并且关闭当前弹出的窗体
+                    window.parent.location.reload();
+                    //});
+                }
+            });
             return false;
         });
 
