@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="700113a3-70c2-4a4d-be48-99d7b90702c3" name="Default Changelist" comment="2019年8月15日11:44:00">
+    <list default="true" id="700113a3-70c2-4a4d-be48-99d7b90702c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/service/WarehouseCheckService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/service/impl/WarehouseCheckServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/java/web/changzihaoController/InventoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/inventoryjs/Matter_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/inventoryjs/Matter_check.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/inventoryjs/Matter_reject.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/inventoryjs/Matter_reject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/inventoryjs/Stock_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/inventoryjs/Stock_check.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/inventoryjs/Warehouse_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/inventoryjs/Warehouse_check.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory/add_Matter_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory/add_Matter_check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory/add_Matter_reject.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory/add_Matter_reject.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory/add_Stock_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory/add_Stock_check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory/add_Warehouse_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory/add_Warehouse_check.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,16 +30,16 @@
     <session id="-1305649387">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
-          <entry key="project.open.time.1" value="10" />
+          <entry key="project.closed" value="22" />
+          <entry key="project.open.time.1" value="11" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -85,7 +73,7 @@
           <entry key="html" value="3194" />
           <entry key="java" value="1849" />
           <entry key="js" value="918" />
-          <entry key="txt" value="203" />
+          <entry key="txt" value="227" />
           <entry key="xml" value="499" />
           <entry key="yml" value="209" />
         </counts>
@@ -95,7 +83,7 @@
           <entry key="HTML" value="3194" />
           <entry key="JAVA" value="1849" />
           <entry key="JavaScript" value="918" />
-          <entry key="PLAIN_TEXT" value="234" />
+          <entry key="PLAIN_TEXT" value="258" />
           <entry key="SQL" value="4" />
           <entry key="XML" value="495" />
           <entry key="YAML" value="209" />
@@ -117,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="929">
+            <state relative-caret-position="2530">
               <caret line="131" selection-start-line="131" selection-end-line="131" />
             </state>
           </provider>
@@ -126,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="217">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -289,6 +277,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -364,9 +355,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -378,7 +366,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565840629593" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565840857860" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -453,6 +441,8 @@
       <workItem from="1565828721805" duration="6284000" />
       <workItem from="1565835790904" duration="1235000" />
       <workItem from="1565838430413" duration="1112000" />
+      <workItem from="1565840763667" duration="105000" />
+      <workItem from="1565840874828" duration="647000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1565353639046</created>
@@ -538,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565832914084</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="2019年8月15日11:46:42">
+      <created>1565840811657</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1565840811657</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -550,7 +547,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100824000" />
+    <option name="totallyTimeSpent" value="101576000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -564,7 +561,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4921986" visible="true" weight="0.22788204" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4921986" visible="true" weight="0.23458445" />
       <window_info id="Structure" order="1" sideWeight="0.50708216" side_tool="true" weight="0.22520107" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -646,7 +643,8 @@
     <MESSAGE value="第一次" />
     <MESSAGE value="2019年8月15日09:28:00" />
     <MESSAGE value="2019年8月15日09:35:00" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019年8月15日09:35:00" />
+    <MESSAGE value="2019年8月15日11:46:42" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019年8月15日11:46:42" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -708,15 +706,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/java/service/impl/InventoryServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="929">
+        <state relative-caret-position="2530">
           <caret line="131" selection-start-line="131" selection-end-line="131" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/java/web/changzihaoController/InventorysController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="217">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
